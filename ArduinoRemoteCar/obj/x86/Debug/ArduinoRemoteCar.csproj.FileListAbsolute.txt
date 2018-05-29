@@ -1,0 +1,24 @@
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.exe
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.pdb
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.csprojResolveAssemblyReference.cache
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Form1.resources
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Properties.Resources.resources
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.csproj.GenerateResource.Cache
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.exe
+D:\CSharp\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.pdb
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.exe
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.pdb
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.exe
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.pdb
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.csprojResolveAssemblyReference.cache
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Form1.resources
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Properties.Resources.resources
+D:\CSDC\ArduinoRemoteCar\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.csproj.GenerateResource.Cache
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.exe
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.pdb
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.exe
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.pdb
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.csprojResolveAssemblyReference.cache
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Form1.resources
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Properties.Resources.resources
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.csproj.GenerateResource.Cache

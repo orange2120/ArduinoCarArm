@@ -1,0 +1,11 @@
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.exe
+D:\Code\CSharp\ArduinoRemoteCar - 複製\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.pdb
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.exe
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.pdb
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.exe
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\bin\Debug\ArduinoRemoteCar.pdb
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoCarArm.csprojResolveAssemblyReference.cache
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Form1.resources
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.tb_clear_data.resources
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoRemoteCar.Properties.Resources.resources
+D:\Code\CSharp\ArduinoCarArm\ArduinoRemoteCar\obj\x86\Debug\ArduinoCarArm.csproj.GenerateResource.Cache
