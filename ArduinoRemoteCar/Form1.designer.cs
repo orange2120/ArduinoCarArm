@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gb_1 = new System.Windows.Forms.GroupBox();
             this.bt_monitor = new System.Windows.Forms.Button();
@@ -47,12 +46,11 @@
             this.bt_forward = new System.Windows.Forms.Button();
             this.gb_state = new System.Windows.Forms.GroupBox();
             this.tb_received = new System.Windows.Forms.TextBox();
+            this.lb_conn_state = new System.Windows.Forms.Label();
             this.lb_motB_PWM = new System.Windows.Forms.Label();
             this.lb_motA_PWM = new System.Windows.Forms.Label();
-            this.lb_conn_state = new System.Windows.Forms.Label();
             this.lb_motB = new System.Windows.Forms.Label();
             this.lb_motA = new System.Windows.Forms.Label();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.gb_SPD = new System.Windows.Forms.GroupBox();
             this.lb_B = new System.Windows.Forms.Label();
             this.lb_A = new System.Windows.Forms.Label();
@@ -217,6 +215,12 @@
             resources.ApplyResources(this.tb_received, "tb_received");
             this.tb_received.Name = "tb_received";
             // 
+            // lb_conn_state
+            // 
+            resources.ApplyResources(this.lb_conn_state, "lb_conn_state");
+            this.lb_conn_state.ForeColor = System.Drawing.Color.Red;
+            this.lb_conn_state.Name = "lb_conn_state";
+            // 
             // lb_motB_PWM
             // 
             resources.ApplyResources(this.lb_motB_PWM, "lb_motB_PWM");
@@ -226,12 +230,6 @@
             // 
             resources.ApplyResources(this.lb_motA_PWM, "lb_motA_PWM");
             this.lb_motA_PWM.Name = "lb_motA_PWM";
-            // 
-            // lb_conn_state
-            // 
-            resources.ApplyResources(this.lb_conn_state, "lb_conn_state");
-            this.lb_conn_state.ForeColor = System.Drawing.Color.Red;
-            this.lb_conn_state.Name = "lb_conn_state";
             // 
             // lb_motB
             // 
@@ -313,6 +311,7 @@
             resources.ApplyResources(this.bt_homing, "bt_homing");
             this.bt_homing.Name = "bt_homing";
             this.bt_homing.UseVisualStyleBackColor = true;
+            this.bt_homing.Click += new System.EventHandler(this.bt_homing_Click);
             // 
             // tbar_servo4
             // 
@@ -477,7 +476,6 @@
         private System.Windows.Forms.GroupBox gb_state;
         private System.Windows.Forms.Label lb_motB;
         private System.Windows.Forms.Label lb_motA;
-        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label lb_conn_state;
         private System.Windows.Forms.Button bt_stop;
         private System.Windows.Forms.Label lb_motB_PWM;
