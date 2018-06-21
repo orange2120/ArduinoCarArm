@@ -31,11 +31,6 @@ namespace ArduinoRemoteCar
 
         }
 
-        public static set_deg(int deg)
-        {
-            SerialComm.Send_cmd();
-        }
-
         public void Home()
         {
             SerialComm.Send_cmd();
