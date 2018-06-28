@@ -83,7 +83,7 @@ namespace ArduinoRemoteCar
         {
             if (SerialComm.Connected())
             {
-                SerialComm.Disconnect()
+                SerialComm.Disconnect();
 
                 lb_conn_state.Text = "Disconnected";
                 lb_conn_state.ForeColor = Color.Red;

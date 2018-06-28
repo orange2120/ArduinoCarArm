@@ -7,9 +7,9 @@ using System.IO;
 
 namespace ArduinoRemoteCar
 {
-    interface SerialComm
+    class SerialComm
     {
-        private SerialPort serialPort1;
+        private static SerialPort serialPort1;
 
 
         serialPort1.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
@@ -35,7 +35,7 @@ namespace ArduinoRemoteCar
 
         private static void set_COM_port(string port)
         {
-             
+             serialPort1.PortName = port;
         }
 
         private static void set_Baud_rate(int baud)
@@ -43,14 +43,24 @@ namespace ArduinoRemoteCar
             serialPort1.BaudRate = baud;
         }
 
-        private static bool Connected()
+        public static bool Connected()
         {
             return serialPort1.IsOpen();
         }
 
         private static void Connect()
         {
+            if(!serialPort1.IsOpen())
+            {
+                try
+                {
+                    serialPort1.Open();
+                }
+                catch
+                {
 
+                }
+            }
 
         }
 
@@ -60,13 +70,13 @@ namespace ArduinoRemoteCar
             return 
         }
 
-        private static void Send_cmd(string cmd)
+        public static void Send_cmd(string cmd)
         {
             if (!serialPort1.IsOpen) return;
             serialPort1.Write(cmd + "\n");
         }
 
-        private static void Send_cmd_nr(string cmd)
+        public static void Send_cmd_nr(string cmd)
         {
             if (!serialPort1.IsOpen) return;
             serialPort1.Write(cmd);

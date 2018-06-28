@@ -7,12 +7,16 @@ namespace ArduinoRemoteCar
 {
     class Servo : Arm
     {
-        public static int servo = 0;
-        public static int servo_home = 100; //Home position
+        private static int servo = 0;
+        private static int servo_home = 100; //Home position
+        
+        enum types {Base, Shoulder, Elbow, Gripper};
 
-        private state void Set_type()
+        int current_type = 0;
+
+        private state void Set_type(int index)
         {
-
+            current_type = index;
         }
 
         private static int Get_degree()
@@ -23,8 +27,6 @@ namespace ArduinoRemoteCar
         private static void Set_degree(int deg)
         {
             servo = deg;
-            SerialComm.Send_cmd(this.type);
-            SerialComm.send_cmd(Command.)
         }
     }
 }

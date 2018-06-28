@@ -7,10 +7,7 @@ namespace ArduinoRemoteCar
 {
     class Arm
     {
-        public class Servo //Servo motor properties
-        {
-            
-        }
+
         public class Position //Arm position in polar coordinate & Cartesian coordinate
         {
             float r; //Radius
