@@ -8,6 +8,9 @@ namespace ArduinoRemoteCar
     class Arm
     {
 
+        private int close_deg = 30;
+        private int open_deg = 120;
+
         public class Position //Arm position in polar coordinate & Cartesian coordinate
         {
             float r; //Radius
@@ -18,24 +21,31 @@ namespace ArduinoRemoteCar
             float z;
         }
 
-        Servo Base = new Servo();
-        Servo Shoulder = new Servo();
-        Servo Elbow = new Servo();
-        Servo Gripper = new Servo();
-
-        public void GetPositon()
-        {
-
-        }
+        Servo base_ = new Servo();
+        Servo shoulder = new Servo();
+        Servo elbow = new Servo();
+        Servo gripper = new Servo();
 
         public void Home()
         {
-            SerialComm.Send_cmd();
+            gripper.home();
+            base_.home();
+            shoulder.home();
+            elbow.home();
         }
 
-        public void Close_gripper()
+
+        public class gripper
         {
-            SerialComm.
+
+            public void Close()
+            {
+                this.Set_degree(close_deg);
+            }
+            public void Open()
+            {
+                this.Set_degree(open_deg);
+            }
         }
 
     }

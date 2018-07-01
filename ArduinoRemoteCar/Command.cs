@@ -15,6 +15,7 @@ namespace ArduinoRemoteCar
         public const string LEFT_CMD    = "l";
         public const string RIGHT_CMD   = "r";
         public const string STOP_CMD    = "s";
+        public const string SOFT_STOP_CMD = "v";
 
         //Arm
         public const string BASE_CMD     = "x";

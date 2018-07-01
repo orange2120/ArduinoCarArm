@@ -20,6 +20,10 @@ namespace ArduinoRemoteCar
             cb_baud.DataSource = SerialComm.Connection_info.BaudRate;
         }
 
+        // 建立車與手臂物件
+        Car car = new Car();
+        Arm arm = new Arm();
+
         #region Connection part
 
         private void bt_rescan_Click(object sender, EventArgs e)
@@ -41,13 +45,13 @@ namespace ArduinoRemoteCar
                 SerialComm.set_Baud_rate(Convert.ToInt32(cb_baud.SelectedItem.ToString()); //Set baudrate
                 if (!SerialComm.Connected())
                 {
-                   
                     bt_conn.Enabled = false;
                     SerialComm.Connect();
-
-                    lb_conn_state.Text = "Connected";
-                    lb_conn_state.ForeColor = Color.Green;
-                #region Button_enable
+                    if(SerialComm.Connected())
+                    {
+                        lb_conn_state.Text = "Connected";
+                        lb_conn_state.ForeColor = Color.Green;
+                         #region Button_enable
                     this.KeyPreview = true;
                     //control part
                     bt_disc.Enabled = true;
@@ -69,6 +73,7 @@ namespace ArduinoRemoteCar
                     tbar_servo3.Enabled = true;
                     tbar_servo4.Enabled = true;
 #endregion
+                    }
                 }
             }
             catch (Exception ex)
@@ -118,98 +123,76 @@ namespace ArduinoRemoteCar
 
         #region Motor control
 
-        private void Update_PWM()
-        {
-            lb_motA_PWM.Text = Convert.ToString(Car.Motor.A_PWM);
-            lb_motB_PWM.Text = Convert.ToString(Car.Motor.B_PWM);
-            SerialComm.Send_cmd(Command.MOT_A_SPD + Car.Motor.A_PWM);
-            SerialComm.Send_cmd(Command.MOT_B_SPD + Car.Motor.B_PWM);
-        }
-
         private void tbar_motA_Scroll(object sender, EventArgs e)
         {
-            Car.Motor.A_PWM = tbar_motA.Value;
+            car.Motor_A.Set_PWM(tbar_motA.Value);
         }
 
         private void tbar_motB_Scroll(object sender, EventArgs e)
         {
-            Car.Motor.B_PWM = tbar_motB.Value;
+            car.Motor_B.Set_PWM(tbar_motB.Value);
         }
 
         #endregion
 
         #region Button Click
 
-        private void Soft_STOP()
-        {
-           SerialComm.Send_cmd("A0");
-           SerialComm.Send_cmd("B0");
-            lb_motA_PWM.Text = "0";
-            lb_motB_PWM.Text = "0";
-        }
-
         private void bt_stop_Click(object sender, EventArgs e)
         {
-           SerialComm.Send_cmd("S");
-            lb_motA_PWM.Text = "0";
-            lb_motB_PWM.Text = "0";
+            car.Stop();
         }
 
         private void bt_forward_MouseDown(object sender, MouseEventArgs e)
         {
             bt_forward.ForeColor = Color.Yellow;
-            Update_PWM();
-           SerialComm.Send_cmd("F");
+            car.Forward();
         }
 
         private void bt_forward_MouseUp(object sender, MouseEventArgs e)
         {
             bt_forward.ForeColor = SystemColors.ControlText;
-            Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_back_MouseDown(object sender, MouseEventArgs e)
         {
             bt_back.ForeColor = Color.Yellow;
-            Update_PWM();
-           SerialComm.Send_cmd("C");
+            car.Soft_STOP();
         }
 
         private void bt_back_MouseUp(object sender, MouseEventArgs e)
         {
             bt_back.ForeColor = SystemColors.ControlText;
-            Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_left_MouseDown(object sender, MouseEventArgs e)
         {
             bt_left.ForeColor = Color.Yellow;
-            Update_PWM();
-           SerialComm.Send_cmd("L");
+            car.TurnLeft();
         }
 
         private void bt_left_MouseUp(object sender, MouseEventArgs e)
         {
             bt_left.ForeColor = SystemColors.ControlText;
-            Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_right_MouseDown(object sender, MouseEventArgs e)
         {
             bt_right.ForeColor = Color.Yellow;
-            Update_PWM();
-           SerialComm.Send_cmd("R");
+            car.TurnRight();
         }
 
         private void bt_right_MouseUp(object sender, MouseEventArgs e)
         {
             bt_right.ForeColor = SystemColors.ControlText;
-            Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_homing_Click(object sender, EventArgs e)
         {
-            
+            arm.Home();
         }
 
         private void bt_arm_fw_MouseDown(object sender, MouseEventArgs e)
@@ -343,35 +326,26 @@ namespace ArduinoRemoteCar
 
         private void tbar_servo1_Scroll(object sender, EventArgs e)
         {
-            Arm.Base.set_deg(tbar_servo1.Value);
+            Arm.Base.Set_degree(tbar_servo1.Value);
             lb_sv1_deg.Text = Convert.ToString(tbar_servo1.Value);
-            SerialComm.Send_cmd_nr(Command.BASE_CMD);
-            SerialComm.Send_cmd(Convert.ToString(tbar_servo1.Value));
-
         }
 
         private void tbar_servo2_Scroll(object sender, EventArgs e)
         {
-            Arm.Shoulder.set_deg(tbar_servo2.Value);
+            Arm.Shoulder.Set_degree(tbar_servo2.Value);
             lb_sv2_deg.Text = Convert.ToString(tbar_servo2.Value);
-            SerialComm.Send_cmd_nr(Command.SHOULDER_CMD);
-            SerialComm.Send_cmd(Convert.ToString(tbar_servo2.Value));
         }
 
         private void tbar_servo3_Scroll(object sender, EventArgs e)
         {
-            Arm.Elbow.set_deg(tbar_servo3.Value);
+            Arm.Elbow.Set_degree(tbar_servo3.Value);
             lb_sv3_deg.Text = Convert.ToString(tbar_servo3.Value);
-            SerialComm.Send_cmd_nr(Command.ELBOW_CMD);
-            SerialComm.Send_cmd(Convert.ToString(tbar_servo3.Value));
         }
 
         private void tbar_servo4_Scroll(object sender, EventArgs e)
         {
-            Arm.Gripper.set_deg(tbar_servo4.Value);
+            Arm.Gripper.Set_degree(tbar_servo4.Value);
             lb_sv4_deg.Text = Convert.ToString(tbar_servo4.Value);
-            SerialComm.Send_cmd_nr(Command.GRIPPER_CMD);
-            SerialComm.Send_cmd(Convert.ToString(tbar_servo4.Value));
         }
 
         #endregion

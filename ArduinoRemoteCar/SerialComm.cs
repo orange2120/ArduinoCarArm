@@ -33,41 +33,46 @@ namespace ArduinoRemoteCar
             string dataLine = serialPort1.ReadLine();
         }
 
-        private static void set_COM_port(string port)
+        public static void set_COM_port(string port)
         {
              serialPort1.PortName = port;
         }
 
-        private static void set_Baud_rate(int baud)
+        public static void set_Baud_rate(int baud)
         {
             serialPort1.BaudRate = baud;
         }
 
         public static bool Connected()
         {
-            return serialPort1.IsOpen();
+            if (serialPort1.IsOpen) return true;
+            else return false;
         }
 
-        private static void Connect()
+        public static bool Connect()
         {
-            if(!serialPort1.IsOpen())
+            if(!serialPort1.IsOpen)
             {
                 try
                 {
                     serialPort1.Open();
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                   // return ex;
+                    return false;
                 }
+                return true;
             }
 
         }
 
         public static bool Disconnect()
         {
-
-            return 
+            if(!serialPort1.IsOpen)
+            {
+            }
+            return true;
         }
 
         public static void Send_cmd(string cmd)
