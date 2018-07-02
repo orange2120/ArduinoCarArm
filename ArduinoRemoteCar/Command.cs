@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    class Command : SerialComm
+    public class Command
     {
         //Commands definition
         public const string MOT_A_SPD   = "a";

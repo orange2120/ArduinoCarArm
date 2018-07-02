@@ -7,14 +7,10 @@ using System.IO;
 
 namespace ArduinoRemoteCar
 {
-    class SerialComm
+    public class SerialComm
     {
-        private static SerialPort serialPort1;
+        static SerialPort serialPort1;
 
-
-        serialPort1.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
-
-        public delegate void AddDataDelegate();
 
         public class Connection_info
         {
@@ -23,25 +19,23 @@ namespace ArduinoRemoteCar
 
         }
 
-        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
-        {
-            this.Invoke(new AddDataDelegate(AddData));
-        }
+        public static string port { get; set; }
+        public static int baud {get;set;}
 
         private void AddData() //Receive data from serial port
         {
             string dataLine = serialPort1.ReadLine();
         }
 
-        public static void set_COM_port(string port)
+        /*public void set_COM_port(string port)
         {
              serialPort1.PortName = port;
-        }
+        }*/
 
-        public static void set_Baud_rate(int baud)
+        /*public void set_Baud_rate(int baud)
         {
             serialPort1.BaudRate = baud;
-        }
+        }*/
 
         public static bool Connected()
         {
@@ -51,26 +45,28 @@ namespace ArduinoRemoteCar
 
         public static bool Connect()
         {
-            if(!serialPort1.IsOpen)
+            if (!serialPort1.IsOpen)
             {
                 try
                 {
+                    serialPort1 = new SerialPort(port,baud);
                     serialPort1.Open();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                   // return ex;
+                    // return ex;
                     return false;
                 }
                 return true;
             }
-
+            return false;
         }
 
         public static bool Disconnect()
         {
-            if(!serialPort1.IsOpen)
+            if (serialPort1.IsOpen)
             {
+                serialPort1.Close();
             }
             return true;
         }
@@ -86,8 +82,6 @@ namespace ArduinoRemoteCar
             if (!serialPort1.IsOpen) return;
             serialPort1.Write(cmd);
         }
-
-        
 
     }
 }

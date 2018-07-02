@@ -24,6 +24,8 @@ namespace ArduinoRemoteCar
         Car car = new Car();
         Arm arm = new Arm();
 
+        
+
         #region Connection part
 
         private void bt_rescan_Click(object sender, EventArgs e)
@@ -41,8 +43,10 @@ namespace ArduinoRemoteCar
         {
             try
             {
-                SerialComm.set_COM_port(cb_port.SelectedItem.ToString());  //Set COM port
-                SerialComm.set_Baud_rate(Convert.ToInt32(cb_baud.SelectedItem.ToString()); //Set baudrate
+                SerialComm.port = cb_port.SelectedItem.ToString();
+                SerialComm.baud = Convert.ToInt32(cb_baud.SelectedItem.ToString());
+                //SerialComm.set_COM_port(cb_port.SelectedItem.ToString());  //Set COM port
+                //SerialComm.set_Baud_rate(Convert.ToInt32(cb_baud.SelectedItem.ToString())); //Set baudrate
                 if (!SerialComm.Connected())
                 {
                     bt_conn.Enabled = false;
@@ -326,25 +330,25 @@ namespace ArduinoRemoteCar
 
         private void tbar_servo1_Scroll(object sender, EventArgs e)
         {
-            Arm.Base.Set_degree(tbar_servo1.Value);
+            arm.base_.Set_degree(tbar_servo1.Value);
             lb_sv1_deg.Text = Convert.ToString(tbar_servo1.Value);
         }
 
         private void tbar_servo2_Scroll(object sender, EventArgs e)
         {
-            Arm.Shoulder.Set_degree(tbar_servo2.Value);
+            arm.shoulder.Set_degree(tbar_servo2.Value);
             lb_sv2_deg.Text = Convert.ToString(tbar_servo2.Value);
         }
 
         private void tbar_servo3_Scroll(object sender, EventArgs e)
         {
-            Arm.Elbow.Set_degree(tbar_servo3.Value);
+            arm.elbow.Set_degree(tbar_servo3.Value);
             lb_sv3_deg.Text = Convert.ToString(tbar_servo3.Value);
         }
 
         private void tbar_servo4_Scroll(object sender, EventArgs e)
         {
-            Arm.Gripper.Set_degree(tbar_servo4.Value);
+            arm.gripper.Set_degree(tbar_servo4.Value);
             lb_sv4_deg.Text = Convert.ToString(tbar_servo4.Value);
         }
 
