@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ArduinoRemoteCar.Arm" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAIAAAAAAAQAAAAgAAAAACAAAAA=</HashCode>
+      <FileName>Arm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Base_" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base_.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Car" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAACAAAAAAAAAAwAAAAAAUABIAAAAAAAAAI=</HashCode>
+      <FileName>Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Command" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgABAAABAAAAAAIAAAAAAMQAoAAAAAAAAIAAgAAAA=</HashCode>
+      <FileName>Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Elbow" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elbow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Form1" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>haDgZAB4ArkAFEwDQhCQYAUKgGAKBGAkgCERQCwAKIA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.tb_clear_data" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAABBAACAgAACBAAYAAAAAAAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Gripper" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIABAAAAAAAAAAAAEAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Gripper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Motor" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAQAAAgAAAAAAAAAAAAEQAAA=</HashCode>
+      <FileName>Motor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Program" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.SerialComm" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAEAAAIAAQAAAAAAAAIAAQAAAAAhAAAAAAAAAAAA=</HashCode>
+      <FileName>SerialComm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Servo" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAIAIAAAAEAAAAAAAAAAAAAEACBAAAAAAAA=</HashCode>
+      <FileName>Servo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Shoulder" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shoulder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Properties.Resources" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Properties.Settings" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微軟正黑體" Size="9" />
+</ClassDiagram>

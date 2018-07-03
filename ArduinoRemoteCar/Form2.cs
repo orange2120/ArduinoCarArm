@@ -9,12 +9,7 @@ using System.Windows.Forms;
 
 namespace ArduinoRemoteCar
 {
-    public partial class tb_clear_data : Form
+    public partial class Form2 : Form
     {
-        public tb_clear_data()
-        {
-            InitializeComponent();
-        }
-
     }
 }

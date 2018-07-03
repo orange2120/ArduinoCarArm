@@ -47,8 +47,8 @@ namespace ArduinoRemoteCar
                 SerialComm.baud = Convert.ToInt32(cb_baud.SelectedItem.ToString());
                 //SerialComm.set_COM_port(cb_port.SelectedItem.ToString());  //Set COM port
                 //SerialComm.set_Baud_rate(Convert.ToInt32(cb_baud.SelectedItem.ToString())); //Set baudrate
-                if (!SerialComm.Connected())
-                {
+               // if (!SerialComm.Connected())
+                //{
                     bt_conn.Enabled = false;
                     SerialComm.Connect();
                     if(SerialComm.Connected())
@@ -70,6 +70,7 @@ namespace ArduinoRemoteCar
                     bt_arm_back.Enabled = true;
                     bt_arm_left.Enabled = true;
                     bt_arm_right.Enabled = true;
+                    bt_arm_grasp.Enabled = true;
                     bt_stop.Enabled = true;
                     bt_homing.Enabled = true;
                     tbar_servo1.Enabled = true;
@@ -78,7 +79,7 @@ namespace ArduinoRemoteCar
                     tbar_servo4.Enabled = true;
 #endregion
                     }
-                }
+                //}
             }
             catch (Exception ex)
             {
@@ -112,6 +113,7 @@ namespace ArduinoRemoteCar
                 bt_arm_back.Enabled = false;
                 bt_arm_left.Enabled = false;
                 bt_arm_right.Enabled = false;
+                bt_arm_grasp.Enabled = false;
                 bt_stop.Enabled = true;
                 bt_homing.Enabled = true;
                 tbar_servo1.Enabled = false;

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public class Motor
+    public class Motor : Car
     {
         //Motor PWM value (0~255)
             private static int PWM = 100;

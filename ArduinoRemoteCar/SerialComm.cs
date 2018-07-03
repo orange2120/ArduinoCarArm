@@ -20,22 +20,12 @@ namespace ArduinoRemoteCar
         }
 
         public static string port { get; set; }
-        public static int baud {get;set;}
+        public static int baud { get; set; }
 
         private void AddData() //Receive data from serial port
         {
             string dataLine = serialPort1.ReadLine();
         }
-
-        /*public void set_COM_port(string port)
-        {
-             serialPort1.PortName = port;
-        }*/
-
-        /*public void set_Baud_rate(int baud)
-        {
-            serialPort1.BaudRate = baud;
-        }*/
 
         public static bool Connected()
         {
@@ -45,11 +35,12 @@ namespace ArduinoRemoteCar
 
         public static bool Connect()
         {
+            serialPort1 = new SerialPort(port, baud);
+            //serialPort1.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
             if (!serialPort1.IsOpen)
             {
                 try
                 {
-                    serialPort1 = new SerialPort(port,baud);
                     serialPort1.Open();
                 }
                 catch (Exception ex)
@@ -67,8 +58,10 @@ namespace ArduinoRemoteCar
             if (serialPort1.IsOpen)
             {
                 serialPort1.Close();
+                return true;
             }
-            return true;
+            else return false;
+            
         }
 
         public static void Send_cmd(string cmd)
