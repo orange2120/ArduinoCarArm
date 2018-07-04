@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    class Arm
+    public class Arm
     {
 
         public Gripper gripper = new Gripper();

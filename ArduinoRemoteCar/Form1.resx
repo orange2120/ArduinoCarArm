@@ -982,16 +982,16 @@
     <value>NoControl</value>
   </data>
   <data name="lb_sv4_deg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 292</value>
+    <value>340, 292</value>
   </data>
   <data name="lb_sv4_deg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>29, 16</value>
   </data>
   <data name="lb_sv4_deg.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
   <data name="lb_sv4_deg.Text" xml:space="preserve">
-    <value>0</value>
+    <value>100</value>
   </data>
   <data name="&gt;&gt;lb_sv4_deg.Name" xml:space="preserve">
     <value>lb_sv4_deg</value>
@@ -1012,16 +1012,16 @@
     <value>NoControl</value>
   </data>
   <data name="lb_sv3_deg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 260</value>
+    <value>340, 260</value>
   </data>
   <data name="lb_sv3_deg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>29, 16</value>
   </data>
   <data name="lb_sv3_deg.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="lb_sv3_deg.Text" xml:space="preserve">
-    <value>0</value>
+    <value>100</value>
   </data>
   <data name="&gt;&gt;lb_sv3_deg.Name" xml:space="preserve">
     <value>lb_sv3_deg</value>
@@ -1042,16 +1042,16 @@
     <value>NoControl</value>
   </data>
   <data name="lb_sv2_deg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 228</value>
+    <value>340, 228</value>
   </data>
   <data name="lb_sv2_deg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>29, 16</value>
   </data>
   <data name="lb_sv2_deg.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="lb_sv2_deg.Text" xml:space="preserve">
-    <value>0</value>
+    <value>100</value>
   </data>
   <data name="&gt;&gt;lb_sv2_deg.Name" xml:space="preserve">
     <value>lb_sv2_deg</value>
@@ -1069,16 +1069,16 @@
     <value>True</value>
   </data>
   <data name="lb_sv1_deg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 196</value>
+    <value>340, 196</value>
   </data>
   <data name="lb_sv1_deg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>29, 16</value>
   </data>
   <data name="lb_sv1_deg.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="lb_sv1_deg.Text" xml:space="preserve">
-    <value>0</value>
+    <value>100</value>
   </data>
   <data name="&gt;&gt;lb_sv1_deg.Name" xml:space="preserve">
     <value>lb_sv1_deg</value>

@@ -17,12 +17,12 @@
   <Class Name="ArduinoRemoteCar.Car" Collapsed="true">
     <Position X="9.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAACAAAAAAAAAAwAAAAAAUABIAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAACAAAACAAAAAAAAAAwAAAAAAEABIAAAAAAAAAI=</HashCode>
       <FileName>Car.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ArduinoRemoteCar.Command" Collapsed="true">
-    <Position X="13.25" Y="0.5" Width="1.5" />
+    <Position X="11.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACgABAAABAAAAAAIAAAAAAMQAoAAAAAAAAIAAgAAAA=</HashCode>
       <FileName>Command.cs</FileName>
@@ -36,7 +36,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ArduinoRemoteCar.Form1" Collapsed="true">
-    <Position X="15" Y="0.5" Width="1.5" />
+    <Position X="13" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>haDgZAB4ArkAFEwDQhCQYAUKgGAKBGAkgCERQCwAKIA=</HashCode>
       <FileName>Form1.cs</FileName>
@@ -57,17 +57,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ArduinoRemoteCar.Program" Collapsed="true">
-    <Position X="13.25" Y="3.5" Width="1.5" />
+    <Position X="11.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ArduinoRemoteCar.SerialComm" Collapsed="true">
-    <Position X="15" Y="1.5" Width="1.5" />
+    <Position X="6.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAAEAAAIAAQAAAAAAAAIAAQAAAAAhAAAAAAAAAAAA=</HashCode>
       <FileName>SerialComm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Servo" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAIAIAAAAEAAAAAAAAAAAAAEACBAAAAAAAA=</HashCode>
+      <FileName>Servo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ArduinoRemoteCar.Shoulder" Collapsed="true">
@@ -77,23 +84,16 @@
       <FileName>Shoulder.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ArduinoRemoteCar.Properties.Resources" Collapsed="true">
-    <Position X="13.25" Y="1.5" Width="1.5" />
+  <Class Name="ArduinoCarArm.Properties.Resources" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="ArduinoRemoteCar.Properties.Settings" Collapsed="true">
-    <Position X="13.25" Y="2.5" Width="1.5" />
+  <Class Name="ArduinoCarArm.Properties.Settings" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ArduinoRemoteCar.Servo" Collapsed="true">
-    <Position X="3.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAAAAIAIAAAAEAAAAAAAAAAAAAEACBAAAAAAAA=</HashCode>
-      <FileName>Servo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="微軟正黑體" Size="9" />

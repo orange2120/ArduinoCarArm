@@ -12,12 +12,15 @@ namespace ArduinoRemoteCar
     public partial class Form1 : Form
     {
 
+        string serialData;
+
         public Form1()
         {
             InitializeComponent();
 
             cb_port.DataSource = SerialComm.Connection_info.GetPorts;
             cb_baud.DataSource = SerialComm.Connection_info.BaudRate;
+            //SerialComm.DataReceivedHandler(this, )
         }
 
         // 建立車與手臂物件
@@ -131,14 +134,12 @@ namespace ArduinoRemoteCar
 
         private void tbar_motA_Scroll(object sender, EventArgs e)
         {
-            //car.Motor_A.Set_PWM(tbar_motA.Value);
-            car.Motor_A.PWM = tbar_motA.Value;
+            car.Motor_A.Set_PWM(tbar_motA.Value);
         }
 
         private void tbar_motB_Scroll(object sender, EventArgs e)
         {
-            //car.Motor_B.Set_PWM(tbar_motB.Value);
-            car.Motor_B.PWM = tbar_motB.Value;
+            car.Motor_B.Set_PWM(tbar_motB.Value);
         }
 
         #endregion

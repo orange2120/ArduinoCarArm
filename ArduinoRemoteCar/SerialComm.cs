@@ -10,7 +10,7 @@ namespace ArduinoRemoteCar
     public class SerialComm
     {
         static SerialPort serialPort1;
-
+         public delegate void AddDataDelegate();
 
         public class Connection_info
         {
@@ -22,9 +22,20 @@ namespace ArduinoRemoteCar
         public static string port { get; set; }
         public static int baud { get; set; }
 
-        private void AddData() //Receive data from serial port
+        /*private void AddData() //Receive data from serial port
         {
             string dataLine = serialPort1.ReadLine();
+        }
+
+        private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            SerialPort sp = (SerialPort)sender;
+            Form1.Invoke(new AddDataDelegate(AddData));
+        }*/
+
+        public class SerialData : EventArgs
+        {
+            public string dataLine = serialPort1.ReadLine();
         }
 
         public static bool Connected()

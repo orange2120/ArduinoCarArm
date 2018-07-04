@@ -5,9 +5,10 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public class Car
+    class Car
     {
-        //private static int speed = 0;
+
+        //private int speed = 0;
 
         public Motor Motor_A = new Motor()
         {
