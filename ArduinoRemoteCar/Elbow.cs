@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public class Elbow : Servo
+    class Elbow : Servo
     {
         public Elbow()
         {

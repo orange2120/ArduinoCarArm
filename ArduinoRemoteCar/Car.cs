@@ -5,10 +5,9 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    class Car
+    public class Car
     {
-
-        private static int speed = 0;
+        //private static int speed = 0;
 
         public Motor Motor_A = new Motor()
         {
@@ -28,14 +27,6 @@ namespace ArduinoRemoteCar
         {
             SerialComm.Send_cmd(Command.SOFT_STOP_CMD);
         }
-
-        /*private void Soft_STOP()
-        {
-            SerialComm.Send_cmd("A0");
-            SerialComm.Send_cmd("B0");
-            lb_motA_PWM.Text = "0";
-            lb_motB_PWM.Text = "0";
-        }*/
 
         public void TurnLeft()
         {

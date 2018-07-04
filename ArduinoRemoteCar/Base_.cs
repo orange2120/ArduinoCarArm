@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public class Base_ : Servo
+    class Base_ : Servo
     {
         public Base_()
         {

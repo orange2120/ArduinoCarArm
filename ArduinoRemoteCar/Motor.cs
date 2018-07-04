@@ -8,13 +8,17 @@ namespace ArduinoRemoteCar
     public class Motor : Car
     {
         //Motor PWM value (0~255)
-            private static int PWM = 100;
-
-            public string SPD_CMD
+        public int PWM 
+        {
+            get { return PWM; }
+            set
             {
-                get;
-                set;
+                Update_PWM();
             }
+        
+        }
+
+            public string SPD_CMD  { get; set; }
             //private string SPD_CMD = "";
 
             /*public void Set_SPD_CMD(string cmd)
@@ -22,16 +26,16 @@ namespace ArduinoRemoteCar
                 SPD_CMD = cmd;
             }*/
 
-            public int Get_PWM()
+            /*public int Get_PWM()
             {
-                return PWM;
+                return this.PWM;
             }
 
             public void Set_PWM(int val)
             {
-                PWM = val;
+                this.PWM = val;
                 this.Update_PWM();
-            }
+            }*/
 
             private void Update_PWM()
             {

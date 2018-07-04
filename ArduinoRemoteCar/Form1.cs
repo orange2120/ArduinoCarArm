@@ -131,12 +131,14 @@ namespace ArduinoRemoteCar
 
         private void tbar_motA_Scroll(object sender, EventArgs e)
         {
-            car.Motor_A.Set_PWM(tbar_motA.Value);
+            //car.Motor_A.Set_PWM(tbar_motA.Value);
+            car.Motor_A.PWM = tbar_motA.Value;
         }
 
         private void tbar_motB_Scroll(object sender, EventArgs e)
         {
-            car.Motor_B.Set_PWM(tbar_motB.Value);
+            //car.Motor_B.Set_PWM(tbar_motB.Value);
+            car.Motor_B.PWM = tbar_motB.Value;
         }
 
         #endregion

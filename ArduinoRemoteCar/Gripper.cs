@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public class Gripper : Servo
+    class Gripper : Servo
     {
         private int close_deg = 30;
         private int open_deg = 120;

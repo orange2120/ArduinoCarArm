@@ -42,12 +42,6 @@
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ArduinoRemoteCar.tb_clear_data" Collapsed="true">
-    <Position X="15" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgAAAAAAACAAAABBAACAgAACBAAYAAAAAAAAAAAgAAA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ArduinoRemoteCar.Gripper" Collapsed="true">
     <Position X="7.25" Y="4" Width="1.5" />
     <TypeIdentifier>
@@ -76,13 +70,6 @@
       <FileName>SerialComm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ArduinoRemoteCar.Servo" Collapsed="true">
-    <Position X="3.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAAAAIAIAAAAEAAAAAAAAAAAAAEACBAAAAAAAA=</HashCode>
-      <FileName>Servo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ArduinoRemoteCar.Shoulder" Collapsed="true">
     <Position X="2.75" Y="4" Width="1.5" />
     <TypeIdentifier>
@@ -100,6 +87,13 @@
     <Position X="13.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Servo" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAIAIAAAAEAAAAAAAAAAAAAEACBAAAAAAAA=</HashCode>
+      <FileName>Servo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="微軟正黑體" Size="9" />
