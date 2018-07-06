@@ -10,6 +10,7 @@ namespace ArduinoRemoteCar
 
         //private int speed = 0;
 
+        //建構2個馬達
         public Motor Motor_A = new Motor()
         {
             SPD_CMD = Command.MOT_A_SPD

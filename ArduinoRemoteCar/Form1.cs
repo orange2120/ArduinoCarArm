@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace ArduinoRemoteCar
 {
@@ -27,19 +28,19 @@ namespace ArduinoRemoteCar
         Car car = new Car();
         Arm arm = new Arm();
 
-        
+        bool mt_sync = false;
 
         #region Connection part
 
         private void bt_rescan_Click(object sender, EventArgs e)
         {
 
-            cb_port.DataSource = SerialComm.Connection_info.GetPorts;
+            cb_port.DataSource =  SerialPort.GetPortNames();
         }
 
         private void bt_monitor_Click(object sender, EventArgs e)
         {
-
+            //TODO: Serial Monitor Window
         }
 
         private void bt_conn_Click(object sender, EventArgs e)
@@ -48,8 +49,6 @@ namespace ArduinoRemoteCar
             {
                 SerialComm.port = cb_port.SelectedItem.ToString();
                 SerialComm.baud = Convert.ToInt32(cb_baud.SelectedItem.ToString());
-                //SerialComm.set_COM_port(cb_port.SelectedItem.ToString());  //Set COM port
-                //SerialComm.set_Baud_rate(Convert.ToInt32(cb_baud.SelectedItem.ToString())); //Set baudrate
                // if (!SerialComm.Connected())
                 //{
                     bt_conn.Enabled = false;
@@ -74,6 +73,8 @@ namespace ArduinoRemoteCar
                     bt_arm_left.Enabled = true;
                     bt_arm_right.Enabled = true;
                     bt_arm_grasp.Enabled = true;
+                    bt_arm_up.Enabled = true;
+                    bt_arm_down.Enabled = true;
                     bt_stop.Enabled = true;
                     bt_homing.Enabled = true;
                     tbar_servo1.Enabled = true;
@@ -97,7 +98,6 @@ namespace ArduinoRemoteCar
             if (SerialComm.Connected())
             {
                 SerialComm.Disconnect();
-
                 lb_conn_state.Text = "Disconnected";
                 lb_conn_state.ForeColor = Color.Red;
 
@@ -117,6 +117,8 @@ namespace ArduinoRemoteCar
                 bt_arm_left.Enabled = false;
                 bt_arm_right.Enabled = false;
                 bt_arm_grasp.Enabled = false;
+                bt_arm_up.Enabled = false;
+                bt_arm_down.Enabled = false;
                 bt_stop.Enabled = true;
                 bt_homing.Enabled = true;
                 tbar_servo1.Enabled = false;
@@ -134,12 +136,25 @@ namespace ArduinoRemoteCar
 
         private void tbar_motA_Scroll(object sender, EventArgs e)
         {
-            car.Motor_A.Set_PWM(tbar_motA.Value);
+            car.Motor_A.PWM = tbar_motA.Value;
+            lb_motA_PWM.Text = Convert.ToString(tbar_motA.Value);
+
+            if (mt_sync)
+            {
+                car.Motor_B.PWM = tbar_motA.Value;
+                lb_motB_PWM.Text = Convert.ToString(tbar_motA.Value);
+            }
         }
 
         private void tbar_motB_Scroll(object sender, EventArgs e)
         {
-            car.Motor_B.Set_PWM(tbar_motB.Value);
+            car.Motor_B.PWM = tbar_motB.Value;
+            lb_motB_PWM.Text = Convert.ToString(tbar_motB.Value);
+            if (mt_sync)
+            {
+                car.Motor_A.PWM = tbar_motB.Value;
+                lb_motA_PWM.Text = Convert.ToString(tbar_motB.Value);
+            }
         }
 
         #endregion
@@ -166,7 +181,7 @@ namespace ArduinoRemoteCar
         private void bt_back_MouseDown(object sender, MouseEventArgs e)
         {
             bt_back.ForeColor = Color.Yellow;
-            car.Soft_STOP();
+            car.Backward();
         }
 
         private void bt_back_MouseUp(object sender, MouseEventArgs e)
@@ -202,48 +217,38 @@ namespace ArduinoRemoteCar
         private void bt_homing_Click(object sender, EventArgs e)
         {
             arm.Home();
-        }
-
-        private void bt_arm_fw_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void bt_arm_fw_MouseUp(object sender, MouseEventArgs e)
-        {
 
         }
 
         private void bt_arm_left_MouseDown(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void bt_arm_left_MouseUp(object sender, MouseEventArgs e)
-        {
-
+            arm.base_.Degree--;
         }
 
         private void bt_arm_right_MouseDown(object sender, MouseEventArgs e)
         {
-
+            arm.base_.Degree++;
         }
 
-        private void bt_arm_right_MouseUp(object sender, MouseEventArgs e)
+        private void bt_arm_fw_MouseDown(object sender, MouseEventArgs e)
         {
-
+            arm.shoulder.Degree++;
         }
 
         private void bt_arm_back_MouseDown(object sender, MouseEventArgs e)
         {
-
+            arm.shoulder.Degree--;
         }
 
-        private void bt_arm_back_MouseUp(object sender, MouseEventArgs e)
+        private void bt_arm_up_Click(object sender, EventArgs e)
         {
-
+            arm.elbow.Degree++;
         }
 
+        private void bt_arm_down_Click(object sender, EventArgs e)
+        {
+            arm.elbow.Degree--;
+        }
 
         #endregion
 
@@ -313,51 +318,57 @@ namespace ArduinoRemoteCar
             //Arm control
             if (e.KeyCode == Keys.A)
             {
-                bt_arm_left_MouseUp(null,null);
+                bt_arm_left_MouseDown(null,null);
             }
             else if (e.KeyCode == Keys.W)
             {
-                bt_arm_fw_MouseUp(null, null);
+                bt_arm_fw_MouseDown(null, null);
             }
             else if (e.KeyCode == Keys.S)
             {
-                bt_arm_back_MouseUp(null, null);
+                bt_arm_back_MouseDown(null, null);
             }
             else if (e.KeyCode == Keys.D)
             {
-                bt_arm_right_MouseUp(null, null);
+                bt_arm_right_MouseDown(null, null);
             }
         }
 
         #endregion
 
-        #region Bar pull
+        #region Servo Bar pull
 
-        private void tbar_servo1_Scroll(object sender, EventArgs e)
+        private void tbar_servo1_Scroll(object sender, EventArgs e) //Base
         {
-            arm.base_.Set_degree(tbar_servo1.Value);
+            arm.base_.Degree = tbar_servo1.Value;
             lb_sv1_deg.Text = Convert.ToString(tbar_servo1.Value);
         }
 
-        private void tbar_servo2_Scroll(object sender, EventArgs e)
+        private void tbar_servo2_Scroll(object sender, EventArgs e) //Shoulder
         {
-            arm.shoulder.Set_degree(tbar_servo2.Value);
+            arm.shoulder.Degree = tbar_servo2.Value;
             lb_sv2_deg.Text = Convert.ToString(tbar_servo2.Value);
         }
 
-        private void tbar_servo3_Scroll(object sender, EventArgs e)
+        private void tbar_servo3_Scroll(object sender, EventArgs e) //Elbow
         {
-            arm.elbow.Set_degree(tbar_servo3.Value);
+            arm.elbow.Degree = tbar_servo3.Value;
             lb_sv3_deg.Text = Convert.ToString(tbar_servo3.Value);
         }
 
-        private void tbar_servo4_Scroll(object sender, EventArgs e)
+        private void tbar_servo4_Scroll(object sender, EventArgs e) //Gripper
         {
-            arm.gripper.Set_degree(tbar_servo4.Value);
+            arm.gripper.Degree = tbar_servo4.Value;
             lb_sv4_deg.Text = Convert.ToString(tbar_servo4.Value);
         }
 
         #endregion
+
+        private void cb_mt_sync_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_mt_sync.Checked) mt_sync = true;
+            else mt_sync = false;
+        }
 
     }
 

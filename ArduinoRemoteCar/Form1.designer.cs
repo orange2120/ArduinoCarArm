@@ -52,6 +52,7 @@
             this.lb_motB = new System.Windows.Forms.Label();
             this.lb_motA = new System.Windows.Forms.Label();
             this.gb_SPD = new System.Windows.Forms.GroupBox();
+            this.cb_mt_sync = new System.Windows.Forms.CheckBox();
             this.lb_B = new System.Windows.Forms.Label();
             this.lb_A = new System.Windows.Forms.Label();
             this.tbar_motB = new System.Windows.Forms.TrackBar();
@@ -243,6 +244,7 @@
             // 
             // gb_SPD
             // 
+            this.gb_SPD.Controls.Add(this.cb_mt_sync);
             this.gb_SPD.Controls.Add(this.lb_B);
             this.gb_SPD.Controls.Add(this.lb_motB_PWM);
             this.gb_SPD.Controls.Add(this.lb_A);
@@ -254,6 +256,13 @@
             resources.ApplyResources(this.gb_SPD, "gb_SPD");
             this.gb_SPD.Name = "gb_SPD";
             this.gb_SPD.TabStop = false;
+            // 
+            // cb_mt_sync
+            // 
+            resources.ApplyResources(this.cb_mt_sync, "cb_mt_sync");
+            this.cb_mt_sync.Name = "cb_mt_sync";
+            this.cb_mt_sync.UseVisualStyleBackColor = true;
+            this.cb_mt_sync.CheckedChanged += new System.EventHandler(this.cb_mt_sync_CheckedChanged);
             // 
             // lb_B
             // 
@@ -379,12 +388,14 @@
             resources.ApplyResources(this.bt_arm_down, "bt_arm_down");
             this.bt_arm_down.Name = "bt_arm_down";
             this.bt_arm_down.UseVisualStyleBackColor = true;
+            this.bt_arm_down.Click += new System.EventHandler(this.bt_arm_down_Click);
             // 
             // bt_arm_up
             // 
             resources.ApplyResources(this.bt_arm_up, "bt_arm_up");
             this.bt_arm_up.Name = "bt_arm_up";
             this.bt_arm_up.UseVisualStyleBackColor = true;
+            this.bt_arm_up.Click += new System.EventHandler(this.bt_arm_up_Click);
             // 
             // bt_arm_grasp
             // 
@@ -399,7 +410,6 @@
             this.bt_arm_right.Name = "bt_arm_right";
             this.bt_arm_right.UseVisualStyleBackColor = true;
             this.bt_arm_right.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_right_MouseDown);
-            this.bt_arm_right.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_right_MouseUp);
             // 
             // bt_arm_back
             // 
@@ -407,7 +417,6 @@
             this.bt_arm_back.Name = "bt_arm_back";
             this.bt_arm_back.UseVisualStyleBackColor = true;
             this.bt_arm_back.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_back_MouseDown);
-            this.bt_arm_back.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_back_MouseUp);
             // 
             // bt_arm_left
             // 
@@ -415,7 +424,6 @@
             this.bt_arm_left.Name = "bt_arm_left";
             this.bt_arm_left.UseVisualStyleBackColor = true;
             this.bt_arm_left.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_left_MouseDown);
-            this.bt_arm_left.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_left_MouseUp);
             // 
             // bt_arm_fw
             // 
@@ -423,7 +431,6 @@
             this.bt_arm_fw.Name = "bt_arm_fw";
             this.bt_arm_fw.UseVisualStyleBackColor = true;
             this.bt_arm_fw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_fw_MouseDown);
-            this.bt_arm_fw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_fw_MouseUp);
             // 
             // Form1
             // 
@@ -505,6 +512,7 @@
         private System.Windows.Forms.TrackBar tbar_servo1;
         private System.Windows.Forms.Button bt_homing;
         private System.Windows.Forms.Button bt_monitor;
+        private System.Windows.Forms.CheckBox cb_mt_sync;
     }
 }
 

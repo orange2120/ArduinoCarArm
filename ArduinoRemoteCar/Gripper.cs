@@ -19,7 +19,7 @@ namespace ArduinoRemoteCar
         {
             Set_degree(close_deg);
         }
-            public void Open()
+        public void Open()
         {
             Set_degree(open_deg);
         }

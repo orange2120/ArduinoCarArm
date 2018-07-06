@@ -22,6 +22,7 @@ namespace ArduinoRemoteCar
         public static string port { get; set; }
         public static int baud { get; set; }
 
+        //TODO:
         /*private void AddData() //Receive data from serial port
         {
             string dataLine = serialPort1.ReadLine();

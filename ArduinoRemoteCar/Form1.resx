@@ -117,11 +117,138 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;bt_monitor.Name" xml:space="preserve">
+    <value>bt_monitor</value>
+  </data>
+  <data name="&gt;&gt;bt_monitor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_monitor.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;bt_monitor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bt_rescan.Name" xml:space="preserve">
+    <value>bt_rescan</value>
+  </data>
+  <data name="&gt;&gt;bt_rescan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_rescan.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;bt_rescan.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bt_disc.Name" xml:space="preserve">
+    <value>bt_disc</value>
+  </data>
+  <data name="&gt;&gt;bt_disc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_disc.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;bt_disc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;bt_conn.Name" xml:space="preserve">
+    <value>bt_conn</value>
+  </data>
+  <data name="&gt;&gt;bt_conn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_conn.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;bt_conn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cb_baud.Name" xml:space="preserve">
+    <value>cb_baud</value>
+  </data>
+  <data name="&gt;&gt;cb_baud.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_baud.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;cb_baud.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cb_port.Name" xml:space="preserve">
+    <value>cb_port</value>
+  </data>
+  <data name="&gt;&gt;cb_port.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_port.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;cb_port.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lb_baud.Name" xml:space="preserve">
+    <value>lb_baud</value>
+  </data>
+  <data name="&gt;&gt;lb_baud.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_baud.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;lb_baud.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lb_port.Name" xml:space="preserve">
+    <value>lb_port</value>
+  </data>
+  <data name="&gt;&gt;lb_port.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_port.Parent" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;lb_port.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gb_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gb_1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="gb_1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="gb_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 80</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gb_1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gb_1.Text" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="&gt;&gt;gb_1.Name" xml:space="preserve">
+    <value>gb_1</value>
+  </data>
+  <data name="&gt;&gt;gb_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gb_1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="bt_monitor.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bt_monitor.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 46</value>
   </data>
@@ -317,36 +444,89 @@
   <data name="&gt;&gt;lb_port.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="gb_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 3</value>
+  <data name="&gt;&gt;bt_stop.Name" xml:space="preserve">
+    <value>bt_stop</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gb_1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="&gt;&gt;bt_stop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="gb_1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="&gt;&gt;bt_stop.Parent" xml:space="preserve">
+    <value>gb_dir_cmd</value>
   </data>
-  <data name="gb_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 80</value>
-  </data>
-  <data name="gb_1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;bt_stop.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="gb_1.Text" xml:space="preserve">
-    <value>Connection</value>
+  <data name="&gt;&gt;bt_right.Name" xml:space="preserve">
+    <value>bt_right</value>
   </data>
-  <data name="&gt;&gt;gb_1.Name" xml:space="preserve">
-    <value>gb_1</value>
+  <data name="&gt;&gt;bt_right.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gb_1.Type" xml:space="preserve">
+  <data name="&gt;&gt;bt_right.Parent" xml:space="preserve">
+    <value>gb_dir_cmd</value>
+  </data>
+  <data name="&gt;&gt;bt_right.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bt_back.Name" xml:space="preserve">
+    <value>bt_back</value>
+  </data>
+  <data name="&gt;&gt;bt_back.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_back.Parent" xml:space="preserve">
+    <value>gb_dir_cmd</value>
+  </data>
+  <data name="&gt;&gt;bt_back.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;bt_left.Name" xml:space="preserve">
+    <value>bt_left</value>
+  </data>
+  <data name="&gt;&gt;bt_left.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_left.Parent" xml:space="preserve">
+    <value>gb_dir_cmd</value>
+  </data>
+  <data name="&gt;&gt;bt_left.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;bt_forward.Name" xml:space="preserve">
+    <value>bt_forward</value>
+  </data>
+  <data name="&gt;&gt;bt_forward.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_forward.Parent" xml:space="preserve">
+    <value>gb_dir_cmd</value>
+  </data>
+  <data name="&gt;&gt;bt_forward.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gb_dir_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 90</value>
+  </data>
+  <data name="gb_dir_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 210</value>
+  </data>
+  <data name="gb_dir_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gb_dir_cmd.Text" xml:space="preserve">
+    <value>Direction Control</value>
+  </data>
+  <data name="&gt;&gt;gb_dir_cmd.Name" xml:space="preserve">
+    <value>gb_dir_cmd</value>
+  </data>
+  <data name="&gt;&gt;gb_dir_cmd.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gb_1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gb_dir_cmd.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;gb_1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;gb_dir_cmd.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="bt_stop.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -495,29 +675,53 @@
   <data name="&gt;&gt;bt_forward.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="gb_dir_cmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 90</value>
+  <data name="&gt;&gt;tb_received.Name" xml:space="preserve">
+    <value>tb_received</value>
   </data>
-  <data name="gb_dir_cmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 210</value>
+  <data name="&gt;&gt;tb_received.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="gb_dir_cmd.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;tb_received.Parent" xml:space="preserve">
+    <value>gb_state</value>
+  </data>
+  <data name="&gt;&gt;tb_received.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_conn_state.Name" xml:space="preserve">
+    <value>lb_conn_state</value>
+  </data>
+  <data name="&gt;&gt;lb_conn_state.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_conn_state.Parent" xml:space="preserve">
+    <value>gb_state</value>
+  </data>
+  <data name="&gt;&gt;lb_conn_state.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="gb_dir_cmd.Text" xml:space="preserve">
-    <value>Direction Control</value>
+  <data name="gb_state.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 214</value>
   </data>
-  <data name="&gt;&gt;gb_dir_cmd.Name" xml:space="preserve">
-    <value>gb_dir_cmd</value>
+  <data name="gb_state.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 86</value>
   </data>
-  <data name="&gt;&gt;gb_dir_cmd.Type" xml:space="preserve">
+  <data name="gb_state.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gb_state.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="&gt;&gt;gb_state.Name" xml:space="preserve">
+    <value>gb_state</value>
+  </data>
+  <data name="&gt;&gt;gb_state.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gb_dir_cmd.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gb_state.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;gb_dir_cmd.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;gb_state.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tb_received.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 52</value>
@@ -570,30 +774,6 @@
   <data name="&gt;&gt;lb_conn_state.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="gb_state.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 214</value>
-  </data>
-  <data name="gb_state.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 86</value>
-  </data>
-  <data name="gb_state.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gb_state.Text" xml:space="preserve">
-    <value>State</value>
-  </data>
-  <data name="&gt;&gt;gb_state.Name" xml:space="preserve">
-    <value>gb_state</value>
-  </data>
-  <data name="&gt;&gt;gb_state.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_state.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gb_state.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="lb_motB_PWM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -619,7 +799,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;lb_motB_PWM.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lb_motA_PWM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -646,7 +826,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;lb_motA_PWM.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lb_motB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -673,7 +853,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;lb_motB.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lb_motA.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -700,7 +880,118 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;lb_motA.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.Name" xml:space="preserve">
+    <value>cb_mt_sync</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.Parent" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_B.Name" xml:space="preserve">
+    <value>lb_B</value>
+  </data>
+  <data name="&gt;&gt;lb_B.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_B.Parent" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;lb_B.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lb_A.Name" xml:space="preserve">
+    <value>lb_A</value>
+  </data>
+  <data name="&gt;&gt;lb_A.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_A.Parent" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;lb_A.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbar_motB.Name" xml:space="preserve">
+    <value>tbar_motB</value>
+  </data>
+  <data name="&gt;&gt;tbar_motB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbar_motB.Parent" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;tbar_motB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tbar_motA.Name" xml:space="preserve">
+    <value>tbar_motA</value>
+  </data>
+  <data name="&gt;&gt;tbar_motA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbar_motA.Parent" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;tbar_motA.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="gb_SPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 91</value>
+  </data>
+  <data name="gb_SPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 117</value>
+  </data>
+  <data name="gb_SPD.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gb_SPD.Text" xml:space="preserve">
+    <value>Motor Speed</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.Name" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cb_mt_sync.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cb_mt_sync.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 83</value>
+  </data>
+  <data name="cb_mt_sync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="cb_mt_sync.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="cb_mt_sync.Text" xml:space="preserve">
+    <value>Sync</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.Name" xml:space="preserve">
+    <value>cb_mt_sync</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.Parent" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;cb_mt_sync.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lb_B.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -727,7 +1018,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;lb_B.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lb_A.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -754,7 +1045,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;lb_A.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tbar_motB.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -778,7 +1069,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;tbar_motB.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tbar_motA.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -802,31 +1093,7 @@
     <value>gb_SPD</value>
   </data>
   <data name="&gt;&gt;tbar_motA.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="gb_SPD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 91</value>
-  </data>
-  <data name="gb_SPD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 117</value>
-  </data>
-  <data name="gb_SPD.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="gb_SPD.Text" xml:space="preserve">
-    <value>Motor Speed</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.Name" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="bt_homing.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -835,7 +1102,7 @@
     <value>279, 24</value>
   </data>
   <data name="bt_homing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
+    <value>75, 49</value>
   </data>
   <data name="bt_homing.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>

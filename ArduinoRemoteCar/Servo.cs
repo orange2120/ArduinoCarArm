@@ -5,11 +5,11 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public class Servo : Arm
+    public abstract class Servo : Arm
     {
         private int servo_deg = 0;
         private int servo_home = 100; //Home position
-        public string CMD = "";
+        public string CMD { get; set; }
 
         public int Get_degree()
         {
@@ -20,6 +20,16 @@ namespace ArduinoRemoteCar
         {
             this.servo_deg = deg;
             Update_degree();
+        }
+
+        public int Get_home()
+        {
+            return servo_home;
+        }
+
+        public void Set_home(int deg)
+        {
+            this.servo_home = deg;
         }
 
         public void home()
