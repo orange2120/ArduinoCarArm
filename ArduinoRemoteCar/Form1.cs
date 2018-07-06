@@ -21,7 +21,6 @@ namespace ArduinoRemoteCar
 
             cb_port.DataSource = SerialComm.Connection_info.GetPorts;
             cb_baud.DataSource = SerialComm.Connection_info.BaudRate;
-            //SerialComm.DataReceivedHandler(this, )
         }
 
         // 建立車與手臂物件
@@ -217,7 +216,14 @@ namespace ArduinoRemoteCar
         private void bt_homing_Click(object sender, EventArgs e)
         {
             arm.Home();
-
+            lb_sv1_deg.Text = Convert.ToString(arm.base_.home_deg);
+            lb_sv2_deg.Text = Convert.ToString(arm.shoulder.home_deg);
+            lb_sv3_deg.Text = Convert.ToString(arm.elbow.home_deg);
+            lb_sv4_deg.Text = Convert.ToString(arm.gripper.home_deg);
+            tbar_servo1.Value = arm.base_.home_deg;
+            tbar_servo2.Value = arm.shoulder.home_deg;
+            tbar_servo3.Value = arm.elbow.home_deg;
+            tbar_servo4.Value = arm.gripper.home_deg;
         }
 
         private void bt_arm_left_MouseDown(object sender, MouseEventArgs e)

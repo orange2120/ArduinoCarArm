@@ -11,17 +11,21 @@ namespace ArduinoRemoteCar
         private int servo_home = 100; //Home position
         public string CMD { get; set; }
 
-        public int Get_degree()
+        public int Degree
         {
-            return servo_deg;
+            get { return servo_deg; }
+            set
+            {
+                servo_deg = value;
+                Update_degree();
+            }
         }
 
-        public void Set_degree(int deg)
+        public int home_deg
         {
-            this.servo_deg = deg;
-            Update_degree();
+            get { return servo_home; }
+            set { servo_home = value; }
         }
-
         public int Get_home()
         {
             return servo_home;
