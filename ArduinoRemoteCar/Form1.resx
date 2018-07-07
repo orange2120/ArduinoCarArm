@@ -675,54 +675,6 @@
   <data name="&gt;&gt;bt_forward.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;tb_received.Name" xml:space="preserve">
-    <value>tb_received</value>
-  </data>
-  <data name="&gt;&gt;tb_received.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_received.Parent" xml:space="preserve">
-    <value>gb_state</value>
-  </data>
-  <data name="&gt;&gt;tb_received.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lb_conn_state.Name" xml:space="preserve">
-    <value>lb_conn_state</value>
-  </data>
-  <data name="&gt;&gt;lb_conn_state.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lb_conn_state.Parent" xml:space="preserve">
-    <value>gb_state</value>
-  </data>
-  <data name="&gt;&gt;lb_conn_state.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="gb_state.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 214</value>
-  </data>
-  <data name="gb_state.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 86</value>
-  </data>
-  <data name="gb_state.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gb_state.Text" xml:space="preserve">
-    <value>State</value>
-  </data>
-  <data name="&gt;&gt;gb_state.Name" xml:space="preserve">
-    <value>gb_state</value>
-  </data>
-  <data name="&gt;&gt;gb_state.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_state.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gb_state.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="tb_received.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 52</value>
   </data>
@@ -751,16 +703,19 @@
     <value>微軟正黑體, 15.75pt, style=Bold</value>
   </data>
   <data name="lb_conn_state.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 19</value>
+    <value>14, 19</value>
   </data>
   <data name="lb_conn_state.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 26</value>
+    <value>152, 26</value>
   </data>
   <data name="lb_conn_state.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="lb_conn_state.Text" xml:space="preserve">
-    <value>Disconnect</value>
+    <value>Disconnected</value>
+  </data>
+  <data name="lb_conn_state.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
   <data name="&gt;&gt;lb_conn_state.Name" xml:space="preserve">
     <value>lb_conn_state</value>
@@ -773,6 +728,30 @@
   </data>
   <data name="&gt;&gt;lb_conn_state.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="gb_state.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 90</value>
+  </data>
+  <data name="gb_state.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 86</value>
+  </data>
+  <data name="gb_state.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gb_state.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="&gt;&gt;gb_state.Name" xml:space="preserve">
+    <value>gb_state</value>
+  </data>
+  <data name="&gt;&gt;gb_state.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_state.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gb_state.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lb_motB_PWM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -882,95 +861,11 @@
   <data name="&gt;&gt;lb_motA.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;cb_mt_sync.Name" xml:space="preserve">
-    <value>cb_mt_sync</value>
-  </data>
-  <data name="&gt;&gt;cb_mt_sync.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cb_mt_sync.Parent" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;cb_mt_sync.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lb_B.Name" xml:space="preserve">
-    <value>lb_B</value>
-  </data>
-  <data name="&gt;&gt;lb_B.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lb_B.Parent" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;lb_B.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lb_A.Name" xml:space="preserve">
-    <value>lb_A</value>
-  </data>
-  <data name="&gt;&gt;lb_A.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lb_A.Parent" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;lb_A.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tbar_motB.Name" xml:space="preserve">
-    <value>tbar_motB</value>
-  </data>
-  <data name="&gt;&gt;tbar_motB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbar_motB.Parent" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;tbar_motB.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tbar_motA.Name" xml:space="preserve">
-    <value>tbar_motA</value>
-  </data>
-  <data name="&gt;&gt;tbar_motA.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbar_motA.Parent" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;tbar_motA.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="gb_SPD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 91</value>
-  </data>
-  <data name="gb_SPD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 117</value>
-  </data>
-  <data name="gb_SPD.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="gb_SPD.Text" xml:space="preserve">
-    <value>Motor Speed</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.Name" xml:space="preserve">
-    <value>gb_SPD</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gb_SPD.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="cb_mt_sync.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="cb_mt_sync.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 83</value>
+    <value>104, 86</value>
   </data>
   <data name="cb_mt_sync.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 20</value>
@@ -1095,6 +990,504 @@
   <data name="&gt;&gt;tbar_motA.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="gb_SPD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 182</value>
+  </data>
+  <data name="gb_SPD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 117</value>
+  </data>
+  <data name="gb_SPD.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gb_SPD.Text" xml:space="preserve">
+    <value>Motor Speed</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.Name" xml:space="preserve">
+    <value>gb_SPD</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gb_SPD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.Name" xml:space="preserve">
+    <value>lb_arm_pos_z</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.Name" xml:space="preserve">
+    <value>lb_arm_pos_y</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.Name" xml:space="preserve">
+    <value>lb_arm_pos_x</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.Name" xml:space="preserve">
+    <value>lb_arm_pos_z_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.Name" xml:space="preserve">
+    <value>lb_arm_pos_y_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.Name" xml:space="preserve">
+    <value>lb_arm_pos_x_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;bt_homing.Name" xml:space="preserve">
+    <value>bt_homing</value>
+  </data>
+  <data name="&gt;&gt;bt_homing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_homing.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_homing.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo4.Name" xml:space="preserve">
+    <value>tbar_servo4</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo4.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo3.Name" xml:space="preserve">
+    <value>tbar_servo3</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo3.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo2.Name" xml:space="preserve">
+    <value>tbar_servo2</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo2.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo1.Name" xml:space="preserve">
+    <value>tbar_servo1</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo1.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;tbar_servo1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lb_sv4_deg.Name" xml:space="preserve">
+    <value>lb_sv4_deg</value>
+  </data>
+  <data name="&gt;&gt;lb_sv4_deg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_sv4_deg.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_sv4_deg.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lb_sv3_deg.Name" xml:space="preserve">
+    <value>lb_sv3_deg</value>
+  </data>
+  <data name="&gt;&gt;lb_sv3_deg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_sv3_deg.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_sv3_deg.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lb_sv2_deg.Name" xml:space="preserve">
+    <value>lb_sv2_deg</value>
+  </data>
+  <data name="&gt;&gt;lb_sv2_deg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_sv2_deg.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_sv2_deg.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lb_sv1_deg.Name" xml:space="preserve">
+    <value>lb_sv1_deg</value>
+  </data>
+  <data name="&gt;&gt;lb_sv1_deg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_sv1_deg.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_sv1_deg.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lb_sv_tag.Name" xml:space="preserve">
+    <value>lb_sv_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_sv_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_sv_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_sv_tag.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_down.Name" xml:space="preserve">
+    <value>bt_arm_down</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_down.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_down.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_down.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_up.Name" xml:space="preserve">
+    <value>bt_arm_up</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_up.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_up.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_up.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_grasp.Name" xml:space="preserve">
+    <value>bt_arm_grasp</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_grasp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_grasp.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_grasp.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_right.Name" xml:space="preserve">
+    <value>bt_arm_right</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_right.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_right.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_right.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_back.Name" xml:space="preserve">
+    <value>bt_arm_back</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_back.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_back.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_back.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_left.Name" xml:space="preserve">
+    <value>bt_arm_left</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_left.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_left.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_left.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_fw.Name" xml:space="preserve">
+    <value>bt_arm_fw</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_fw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_fw.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;bt_arm_fw.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="gb_arm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 305</value>
+  </data>
+  <data name="gb_arm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 330</value>
+  </data>
+  <data name="gb_arm.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gb_arm.Text" xml:space="preserve">
+    <value>Arm Control</value>
+  </data>
+  <data name="&gt;&gt;gb_arm.Name" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;gb_arm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_arm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gb_arm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lb_arm_pos_z.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_arm_pos_z.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_arm_pos_z.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 161</value>
+  </data>
+  <data name="lb_arm_pos_z.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 16</value>
+  </data>
+  <data name="lb_arm_pos_z.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lb_arm_pos_z.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.Name" xml:space="preserve">
+    <value>lb_arm_pos_z</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lb_arm_pos_y.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_arm_pos_y.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_arm_pos_y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 128</value>
+  </data>
+  <data name="lb_arm_pos_y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 16</value>
+  </data>
+  <data name="lb_arm_pos_y.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lb_arm_pos_y.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.Name" xml:space="preserve">
+    <value>lb_arm_pos_y</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lb_arm_pos_x.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_arm_pos_x.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 94</value>
+  </data>
+  <data name="lb_arm_pos_x.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 16</value>
+  </data>
+  <data name="lb_arm_pos_x.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lb_arm_pos_x.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.Name" xml:space="preserve">
+    <value>lb_arm_pos_x</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lb_arm_pos_z_tag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_arm_pos_z_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_arm_pos_z_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 161</value>
+  </data>
+  <data name="lb_arm_pos_z_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 16</value>
+  </data>
+  <data name="lb_arm_pos_z_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lb_arm_pos_z_tag.Text" xml:space="preserve">
+    <value>Z:</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.Name" xml:space="preserve">
+    <value>lb_arm_pos_z_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_z_tag.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lb_arm_pos_y_tag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_arm_pos_y_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_arm_pos_y_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 127</value>
+  </data>
+  <data name="lb_arm_pos_y_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 16</value>
+  </data>
+  <data name="lb_arm_pos_y_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="lb_arm_pos_y_tag.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.Name" xml:space="preserve">
+    <value>lb_arm_pos_y_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_y_tag.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lb_arm_pos_x_tag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_arm_pos_x_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 94</value>
+  </data>
+  <data name="lb_arm_pos_x_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="lb_arm_pos_x_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lb_arm_pos_x_tag.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.Name" xml:space="preserve">
+    <value>lb_arm_pos_x_tag</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.Parent" xml:space="preserve">
+    <value>gb_arm</value>
+  </data>
+  <data name="&gt;&gt;lb_arm_pos_x_tag.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="bt_homing.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1120,7 +1513,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_homing.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="tbar_servo4.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1150,7 +1543,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;tbar_servo4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="tbar_servo3.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1180,7 +1573,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;tbar_servo3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="tbar_servo2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1210,7 +1603,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;tbar_servo2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="tbar_servo1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1240,7 +1633,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;tbar_servo1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="lb_sv4_deg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1270,7 +1663,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;lb_sv4_deg.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="lb_sv3_deg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1300,7 +1693,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;lb_sv3_deg.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="lb_sv2_deg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1330,7 +1723,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;lb_sv2_deg.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="lb_sv1_deg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1357,7 +1750,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;lb_sv1_deg.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="lb_sv_tag.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1389,7 +1782,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;lb_sv_tag.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>15</value>
   </data>
   <data name="bt_arm_down.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1422,7 +1815,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_down.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="bt_arm_up.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1455,7 +1848,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_up.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="bt_arm_grasp.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1485,7 +1878,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_grasp.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="bt_arm_right.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1518,7 +1911,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_right.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>19</value>
   </data>
   <data name="bt_arm_back.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1551,7 +1944,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_back.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="bt_arm_left.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1584,7 +1977,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_left.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
   <data name="bt_arm_fw.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1617,31 +2010,7 @@
     <value>gb_arm</value>
   </data>
   <data name="&gt;&gt;bt_arm_fw.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="gb_arm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 305</value>
-  </data>
-  <data name="gb_arm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 330</value>
-  </data>
-  <data name="gb_arm.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gb_arm.Text" xml:space="preserve">
-    <value>Arm Control</value>
-  </data>
-  <data name="&gt;&gt;gb_arm.Name" xml:space="preserve">
-    <value>gb_arm</value>
-  </data>
-  <data name="&gt;&gt;gb_arm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_arm.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gb_arm.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>22</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

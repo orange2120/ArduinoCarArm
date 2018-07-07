@@ -17,11 +17,11 @@ namespace ArduinoRemoteCar
 
         public void Close()
         {
-            Degree = close_deg;
+            this.Degree = close_deg;
         }
         public void Open()
         {
-            Degree = open_deg;
+            this.Degree = open_deg;
         }
     }
 }

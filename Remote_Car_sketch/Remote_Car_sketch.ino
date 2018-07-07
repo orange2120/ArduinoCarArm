@@ -3,40 +3,11 @@
  *
  */
 #include <Servo.h>
+#include "Definition.h"
 #include "CarMotor.h"
 #include "ArmControl.h"
 
-//Commands definition
-#define MOT_A_SPD   'a'
-#define MOT_B_SPD   'c'
-#define FORWARD_CMD 'f'
-#define BACK_CMD    'b'
-#define LEFT_CMD    'l'
-#define RIGHT_CMD   'r'
-#define STOP_CMD    's'
-#define BRAKE_CMD   'v'
-
-//Arm
-#define BASE_CMD    'x'
-#define SHOULDER_CMD 'u'
-#define ELBOW_CMD   'e'
-#define GRIPPER_CMD 'g'
-
-//Pins definition
-#define ENA 3
-#define ENB 5
-#define IN1 13
-#define IN2 12
-#define IN3 11
-#define IN4 10
-
 CarMotor mt(IN1, IN2, IN3, IN4, ENA, ENB);
-
-//Servo motor object                       
-#define SV1_PIN 7 //Base
-#define SV2_PIN 2 //Shoulder
-#define SV3_PIN 6 //Elbow
-#define SV4_PIN 4 //Gripper
 
 Arm arm(SV1_PIN, SV2_PIN, SV3_PIN, SV4_PIN);
 
@@ -46,8 +17,6 @@ char incoming = '0';
 char cmd = '0';
 int num= 0;
 int i = 0;
-//angle by Agdanpanda
-int angle_imed = 0;
 
 void setup()
 {	

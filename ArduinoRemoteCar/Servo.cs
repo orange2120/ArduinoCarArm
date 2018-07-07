@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    public abstract class Servo : Arm
+    public abstract class Servo// : Arm
     {
         private int servo_deg = 0;
         private int servo_home = 100; //Home position
@@ -25,15 +25,6 @@ namespace ArduinoRemoteCar
         {
             get { return servo_home; }
             set { servo_home = value; }
-        }
-        public int Get_home()
-        {
-            return servo_home;
-        }
-
-        public void Set_home(int deg)
-        {
-            this.servo_home = deg;
         }
 
         public void home()

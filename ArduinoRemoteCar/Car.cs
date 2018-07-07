@@ -8,18 +8,22 @@ namespace ArduinoRemoteCar
     class Car
     {
 
-        //private int speed = 0;
+        public Motor Motor_A;
+        public Motor Motor_B;
 
-        //建構2個馬達
-        public Motor Motor_A = new Motor()
+        public Car()
         {
-            SPD_CMD = Command.MOT_A_SPD
-        };
-        public Motor Motor_B = new Motor()
-        {
-            SPD_CMD = Command.MOT_B_SPD
-        };
-
+            //建構2個馬達
+            Motor_A = new Motor()
+            {
+                SPD_CMD = Command.MOT_A_SPD
+            };
+            Motor_B = new Motor()
+            {
+                SPD_CMD = Command.MOT_B_SPD
+            };
+        }
+        
         public void Stop()
         {
             SerialComm.Send_cmd(Command.STOP_CMD);

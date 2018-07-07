@@ -4,14 +4,14 @@ Library of Car Motor
 
 #include "CarMotor.h"
 
-CarMotor::CarMotor(uint8_t IN1, uint8_t IN2, uint8_t IN3, uint8_t IN4, uint8_t pin_A, uint8_t pin_B)
+CarMotor::CarMotor(uint8_t _IN1, uint8_t _IN2, uint8_t _IN3, uint8_t _IN4, uint8_t pin_A, uint8_t pin_B)
 {
 	_pin_ENA = pin_A;
 	_pin_ENB = pin_B;
-	_pin_IN1 = IN1;
-	_pin_IN2 = IN2;
-	_pin_IN3 = IN3;
-	_pin_IN4 = IN4;
+	_pin_IN1 = _IN1;
+	_pin_IN2 = _IN2;
+	_pin_IN3 = _IN3;
+	_pin_IN4 = _IN4;
 }
 
 void CarMotor::init()

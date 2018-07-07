@@ -17,7 +17,7 @@ class CarMotor
 		int _pwm_B = 0;
 	
 	public:
-		CarMotor(uint8_t IN1, uint8_t IN2, uint8_t IN3, uint8_t IN4, uint8_t pin_A, uint8_t pin_B);
+		CarMotor(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t);
 		void init();
 		
 		void set_motorA_speed(int speed_A);

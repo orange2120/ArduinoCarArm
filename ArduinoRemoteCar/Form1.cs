@@ -14,6 +14,11 @@ namespace ArduinoRemoteCar
     {
 
         string serialData;
+        bool mt_sync = false;
+
+        // 建立車與手臂物件
+        Car car;
+        Arm arm;
 
         public Form1()
         {
@@ -21,13 +26,10 @@ namespace ArduinoRemoteCar
 
             cb_port.DataSource = SerialComm.Connection_info.GetPorts;
             cb_baud.DataSource = SerialComm.Connection_info.BaudRate;
+
+            car = new Car();
+            arm = new Arm();
         }
-
-        // 建立車與手臂物件
-        Car car = new Car();
-        Arm arm = new Arm();
-
-        bool mt_sync = false;
 
         #region Connection part
 
@@ -48,15 +50,15 @@ namespace ArduinoRemoteCar
             {
                 SerialComm.port = cb_port.SelectedItem.ToString();
                 SerialComm.baud = Convert.ToInt32(cb_baud.SelectedItem.ToString());
-               // if (!SerialComm.Connected())
+                // if (!SerialComm.Connected())
                 //{
-                    bt_conn.Enabled = false;
-                    SerialComm.Connect();
-                    if(SerialComm.Connected())
-                    {
-                        lb_conn_state.Text = "Connected";
-                        lb_conn_state.ForeColor = Color.Green;
-                         #region Button_enable
+                bt_conn.Enabled = false;
+                SerialComm.Connect();
+                if (SerialComm.Connected())
+                {
+                    lb_conn_state.Text = "Connected";
+                    lb_conn_state.ForeColor = Color.Green;
+                    #region Button_enable
                     this.KeyPreview = true;
                     //control part
                     bt_disc.Enabled = true;
@@ -80,8 +82,8 @@ namespace ArduinoRemoteCar
                     tbar_servo2.Enabled = true;
                     tbar_servo3.Enabled = true;
                     tbar_servo4.Enabled = true;
-#endregion
-                    }
+                    #endregion
+                }
                 //}
             }
             catch (Exception ex)
@@ -118,8 +120,7 @@ namespace ArduinoRemoteCar
                 bt_arm_grasp.Enabled = false;
                 bt_arm_up.Enabled = false;
                 bt_arm_down.Enabled = false;
-                bt_stop.Enabled = true;
-                bt_homing.Enabled = true;
+                bt_homing.Enabled = false;
                 tbar_servo1.Enabled = false;
                 tbar_servo2.Enabled = false;
                 tbar_servo3.Enabled = false;
@@ -133,6 +134,23 @@ namespace ArduinoRemoteCar
 
         #region Motor control
 
+        private void cb_mt_sync_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_mt_sync.Checked)
+            {
+                mt_sync = true;
+                int temp_PWM = (tbar_motA.Value + tbar_motB.Value)/2;
+                tbar_motA.Value = temp_PWM;
+                tbar_motB.Value = temp_PWM;
+                lb_motA_PWM.Text = Convert.ToString(temp_PWM);
+                lb_motB_PWM.Text = Convert.ToString(temp_PWM);
+                car.Motor_A.PWM = temp_PWM;
+                car.Motor_B.PWM = temp_PWM;
+
+            }
+            else mt_sync = false;
+        }
+
         private void tbar_motA_Scroll(object sender, EventArgs e)
         {
             car.Motor_A.PWM = tbar_motA.Value;
@@ -142,6 +160,7 @@ namespace ArduinoRemoteCar
             {
                 car.Motor_B.PWM = tbar_motA.Value;
                 lb_motB_PWM.Text = Convert.ToString(tbar_motA.Value);
+                tbar_motB.Value = tbar_motA.Value;
             }
         }
 
@@ -153,12 +172,15 @@ namespace ArduinoRemoteCar
             {
                 car.Motor_A.PWM = tbar_motB.Value;
                 lb_motA_PWM.Text = Convert.ToString(tbar_motB.Value);
+                tbar_motA.Value = tbar_motB.Value;
             }
         }
 
         #endregion
 
         #region Button Click
+
+            #region Car
 
         private void bt_stop_Click(object sender, EventArgs e)
         {
@@ -174,7 +196,7 @@ namespace ArduinoRemoteCar
         private void bt_forward_MouseUp(object sender, MouseEventArgs e)
         {
             bt_forward.ForeColor = SystemColors.ControlText;
-            car.Soft_STOP();
+            //car.Soft_STOP();
         }
 
         private void bt_back_MouseDown(object sender, MouseEventArgs e)
@@ -186,7 +208,7 @@ namespace ArduinoRemoteCar
         private void bt_back_MouseUp(object sender, MouseEventArgs e)
         {
             bt_back.ForeColor = SystemColors.ControlText;
-            car.Soft_STOP();
+            //car.Soft_STOP();
         }
 
         private void bt_left_MouseDown(object sender, MouseEventArgs e)
@@ -198,7 +220,7 @@ namespace ArduinoRemoteCar
         private void bt_left_MouseUp(object sender, MouseEventArgs e)
         {
             bt_left.ForeColor = SystemColors.ControlText;
-            car.Soft_STOP();
+            //car.Soft_STOP();
         }
 
         private void bt_right_MouseDown(object sender, MouseEventArgs e)
@@ -210,9 +232,12 @@ namespace ArduinoRemoteCar
         private void bt_right_MouseUp(object sender, MouseEventArgs e)
         {
             bt_right.ForeColor = SystemColors.ControlText;
-            car.Soft_STOP();
+            //car.Soft_STOP();
         }
 
+        #endregion
+
+            #region Arm
         private void bt_homing_Click(object sender, EventArgs e)
         {
             arm.Home();
@@ -228,33 +253,70 @@ namespace ArduinoRemoteCar
 
         private void bt_arm_left_MouseDown(object sender, MouseEventArgs e)
         {
-            arm.base_.Degree--;
+            bt_arm_left.ForeColor = Color.Yellow;
+            arm.base_.Degree -= Command.ARM_MOVE_STEP;
         }
 
         private void bt_arm_right_MouseDown(object sender, MouseEventArgs e)
         {
-            arm.base_.Degree++;
+            bt_arm_right.ForeColor = Color.Yellow;
+            arm.base_.Degree += Command.ARM_MOVE_STEP;
         }
 
         private void bt_arm_fw_MouseDown(object sender, MouseEventArgs e)
         {
-            arm.shoulder.Degree++;
+            bt_arm_fw.ForeColor = Color.Yellow;
+            arm.shoulder.Degree += Command.ARM_MOVE_STEP;
         }
 
         private void bt_arm_back_MouseDown(object sender, MouseEventArgs e)
         {
-            arm.shoulder.Degree--;
+            bt_arm_back.ForeColor = Color.Yellow;
+            arm.shoulder.Degree -= Command.ARM_MOVE_STEP;
         }
 
-        private void bt_arm_up_Click(object sender, EventArgs e)
+        private void bt_arm_fw_MouseUp(object sender, MouseEventArgs e)
         {
-            arm.elbow.Degree++;
+            bt_arm_fw.ForeColor = SystemColors.ControlText;
         }
 
-        private void bt_arm_down_Click(object sender, EventArgs e)
+        private void bt_arm_right_MouseUp(object sender, MouseEventArgs e)
         {
-            arm.elbow.Degree--;
+            bt_arm_right.ForeColor = SystemColors.ControlText;
         }
+
+        private void bt_arm_left_MouseUp(object sender, MouseEventArgs e)
+        {
+            bt_arm_left.ForeColor = SystemColors.ControlText;
+        }
+
+        private void bt_arm_back_MouseUp(object sender, MouseEventArgs e)
+        {
+            bt_arm_back.ForeColor = SystemColors.ControlText;
+        }
+
+        private void bt_arm_up_MouseDown(object sender, MouseEventArgs e)
+        {
+            bt_arm_up.ForeColor = Color.Yellow;
+            arm.elbow.Degree += Command.ARM_MOVE_STEP;
+        }
+
+        private void bt_arm_down_MouseDown(object sender, MouseEventArgs e)
+        {
+            bt_arm_down.ForeColor = Color.Yellow;
+            arm.elbow.Degree -= Command.ARM_MOVE_STEP;
+        }
+
+        private void bt_arm_up_MouseUp(object sender, MouseEventArgs e)
+        {
+            bt_arm_up.ForeColor = SystemColors.ControlText;
+        }
+
+        private void bt_arm_down_MouseUp(object sender, MouseEventArgs e)
+        {
+            bt_arm_down.ForeColor = SystemColors.ControlText;
+        }
+        #endregion
 
         #endregion
 
@@ -263,7 +325,7 @@ namespace ArduinoRemoteCar
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             //Direction control
-            if (e.KeyCode == Keys.S)
+            if (e.KeyCode == Keys.Decimal)
             {
                 bt_stop_Click(null, null);
             }
@@ -300,6 +362,14 @@ namespace ArduinoRemoteCar
             {
                 bt_arm_right_MouseDown(null, null);
             }
+            else if (e.KeyCode == Keys.Q)
+            {
+                bt_arm_up_MouseDown(null, null);
+            }
+            else if (e.KeyCode == Keys.E)
+            {
+                bt_arm_down_MouseDown(null, null);
+            }
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -324,19 +394,27 @@ namespace ArduinoRemoteCar
             //Arm control
             if (e.KeyCode == Keys.A)
             {
-                bt_arm_left_MouseDown(null,null);
+                bt_arm_left_MouseUp(null,null);
             }
             else if (e.KeyCode == Keys.W)
             {
-                bt_arm_fw_MouseDown(null, null);
+                bt_arm_fw_MouseUp(null, null);
             }
             else if (e.KeyCode == Keys.S)
             {
-                bt_arm_back_MouseDown(null, null);
+                bt_arm_back_MouseUp(null, null);
             }
             else if (e.KeyCode == Keys.D)
             {
-                bt_arm_right_MouseDown(null, null);
+                bt_arm_right_MouseUp(null, null);
+            }
+            else if (e.KeyCode == Keys.Q)
+            {
+                bt_arm_up_MouseUp(null, null);
+            }
+            else if (e.KeyCode == Keys.E)
+            {
+                bt_arm_down_MouseUp(null, null);
             }
         }
 
@@ -369,12 +447,6 @@ namespace ArduinoRemoteCar
         }
 
         #endregion
-
-        private void cb_mt_sync_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cb_mt_sync.Checked) mt_sync = true;
-            else mt_sync = false;
-        }
 
     }
 

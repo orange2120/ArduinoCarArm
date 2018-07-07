@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ArduinoRemoteCar.Arm" Collapsed="true">
-    <Position X="3.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAIAAAAAAAQAAAAgAAAAACAAAAA=</HashCode>
-      <FileName>Arm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ArduinoRemoteCar.Base_" Collapsed="true">
     <Position X="5" Y="4" Width="1.5" />
     <TypeIdentifier>
@@ -38,7 +31,7 @@
   <Class Name="ArduinoRemoteCar.Form1" Collapsed="true">
     <Position X="13" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>haDgZAB4ArkAFEwDQhCQYAUKgGAKBGAkgCERQCwAKIA=</HashCode>
+      <HashCode>haDgZAF4ArkAFEwDQhCYYA0KgGAKBGAkgCEBQCwAKIA=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +45,7 @@
   <Class Name="ArduinoRemoteCar.Motor" Collapsed="true">
     <Position X="9.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAQAAAgAAAAAAAAAAAAEQAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQgAAAAAAAAAQAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Motor.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,14 +59,14 @@
   <Class Name="ArduinoRemoteCar.SerialComm" Collapsed="true">
     <Position X="6.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AASAAEAAAIAAQAAAAAAAAIAAQAAAAAhAAAAAAAAAAAA=</HashCode>
+      <HashCode>AASAAEAAAAAAQAAAAAAAAIAAQAAAAAhAAAAAAAAAAAA=</HashCode>
       <FileName>SerialComm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ArduinoRemoteCar.Servo" Collapsed="true">
     <Position X="3.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAIAIAAAAEAAAAAAAAAAAAAEACBAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAIAAAAEAAAAAQAAAAAAAEAABAAAAAAAI=</HashCode>
       <FileName>Servo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -94,6 +87,13 @@
     <Position X="11.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArduinoRemoteCar.Arm" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAIAAAAAAAQAAAAgAAAAACAEAAA=</HashCode>
+      <FileName>Arm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="微軟正黑體" Size="9" />

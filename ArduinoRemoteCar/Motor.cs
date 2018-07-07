@@ -5,11 +5,16 @@ using System.Text;
 
 namespace ArduinoRemoteCar
 {
-    class Motor : Car
+    class Motor //: Car
     {
         public string SPD_CMD { get; set; }
         //Motor PWM value (0~255)
-        private int PWM_val = 100;
+        private int PWM_val = Command.DEFAULT_MOT_PWM;
+
+        public Motor()
+        {
+            //Update_PWM();
+        }
 
         public int PWM
         {

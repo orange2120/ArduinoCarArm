@@ -58,6 +58,12 @@
             this.tbar_motB = new System.Windows.Forms.TrackBar();
             this.tbar_motA = new System.Windows.Forms.TrackBar();
             this.gb_arm = new System.Windows.Forms.GroupBox();
+            this.lb_arm_pos_z = new System.Windows.Forms.Label();
+            this.lb_arm_pos_y = new System.Windows.Forms.Label();
+            this.lb_arm_pos_x = new System.Windows.Forms.Label();
+            this.lb_arm_pos_z_tag = new System.Windows.Forms.Label();
+            this.lb_arm_pos_y_tag = new System.Windows.Forms.Label();
+            this.lb_arm_pos_x_tag = new System.Windows.Forms.Label();
             this.bt_homing = new System.Windows.Forms.Button();
             this.tbar_servo4 = new System.Windows.Forms.TrackBar();
             this.tbar_servo3 = new System.Windows.Forms.TrackBar();
@@ -294,6 +300,12 @@
             // 
             // gb_arm
             // 
+            this.gb_arm.Controls.Add(this.lb_arm_pos_z);
+            this.gb_arm.Controls.Add(this.lb_arm_pos_y);
+            this.gb_arm.Controls.Add(this.lb_arm_pos_x);
+            this.gb_arm.Controls.Add(this.lb_arm_pos_z_tag);
+            this.gb_arm.Controls.Add(this.lb_arm_pos_y_tag);
+            this.gb_arm.Controls.Add(this.lb_arm_pos_x_tag);
             this.gb_arm.Controls.Add(this.bt_homing);
             this.gb_arm.Controls.Add(this.tbar_servo4);
             this.gb_arm.Controls.Add(this.tbar_servo3);
@@ -314,6 +326,36 @@
             resources.ApplyResources(this.gb_arm, "gb_arm");
             this.gb_arm.Name = "gb_arm";
             this.gb_arm.TabStop = false;
+            // 
+            // lb_arm_pos_z
+            // 
+            resources.ApplyResources(this.lb_arm_pos_z, "lb_arm_pos_z");
+            this.lb_arm_pos_z.Name = "lb_arm_pos_z";
+            // 
+            // lb_arm_pos_y
+            // 
+            resources.ApplyResources(this.lb_arm_pos_y, "lb_arm_pos_y");
+            this.lb_arm_pos_y.Name = "lb_arm_pos_y";
+            // 
+            // lb_arm_pos_x
+            // 
+            resources.ApplyResources(this.lb_arm_pos_x, "lb_arm_pos_x");
+            this.lb_arm_pos_x.Name = "lb_arm_pos_x";
+            // 
+            // lb_arm_pos_z_tag
+            // 
+            resources.ApplyResources(this.lb_arm_pos_z_tag, "lb_arm_pos_z_tag");
+            this.lb_arm_pos_z_tag.Name = "lb_arm_pos_z_tag";
+            // 
+            // lb_arm_pos_y_tag
+            // 
+            resources.ApplyResources(this.lb_arm_pos_y_tag, "lb_arm_pos_y_tag");
+            this.lb_arm_pos_y_tag.Name = "lb_arm_pos_y_tag";
+            // 
+            // lb_arm_pos_x_tag
+            // 
+            resources.ApplyResources(this.lb_arm_pos_x_tag, "lb_arm_pos_x_tag");
+            this.lb_arm_pos_x_tag.Name = "lb_arm_pos_x_tag";
             // 
             // bt_homing
             // 
@@ -388,14 +430,16 @@
             resources.ApplyResources(this.bt_arm_down, "bt_arm_down");
             this.bt_arm_down.Name = "bt_arm_down";
             this.bt_arm_down.UseVisualStyleBackColor = true;
-            this.bt_arm_down.Click += new System.EventHandler(this.bt_arm_down_Click);
+            this.bt_arm_down.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_down_MouseDown);
+            this.bt_arm_down.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_down_MouseUp);
             // 
             // bt_arm_up
             // 
             resources.ApplyResources(this.bt_arm_up, "bt_arm_up");
             this.bt_arm_up.Name = "bt_arm_up";
             this.bt_arm_up.UseVisualStyleBackColor = true;
-            this.bt_arm_up.Click += new System.EventHandler(this.bt_arm_up_Click);
+            this.bt_arm_up.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_up_MouseDown);
+            this.bt_arm_up.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_up_MouseUp);
             // 
             // bt_arm_grasp
             // 
@@ -410,6 +454,7 @@
             this.bt_arm_right.Name = "bt_arm_right";
             this.bt_arm_right.UseVisualStyleBackColor = true;
             this.bt_arm_right.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_right_MouseDown);
+            this.bt_arm_right.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_right_MouseUp);
             // 
             // bt_arm_back
             // 
@@ -417,6 +462,7 @@
             this.bt_arm_back.Name = "bt_arm_back";
             this.bt_arm_back.UseVisualStyleBackColor = true;
             this.bt_arm_back.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_back_MouseDown);
+            this.bt_arm_back.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_back_MouseUp);
             // 
             // bt_arm_left
             // 
@@ -424,6 +470,7 @@
             this.bt_arm_left.Name = "bt_arm_left";
             this.bt_arm_left.UseVisualStyleBackColor = true;
             this.bt_arm_left.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_left_MouseDown);
+            this.bt_arm_left.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_left_MouseUp);
             // 
             // bt_arm_fw
             // 
@@ -431,6 +478,7 @@
             this.bt_arm_fw.Name = "bt_arm_fw";
             this.bt_arm_fw.UseVisualStyleBackColor = true;
             this.bt_arm_fw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_fw_MouseDown);
+            this.bt_arm_fw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_fw_MouseUp);
             // 
             // Form1
             // 
@@ -513,6 +561,12 @@
         private System.Windows.Forms.Button bt_homing;
         private System.Windows.Forms.Button bt_monitor;
         private System.Windows.Forms.CheckBox cb_mt_sync;
+        private System.Windows.Forms.Label lb_arm_pos_z_tag;
+        private System.Windows.Forms.Label lb_arm_pos_y_tag;
+        private System.Windows.Forms.Label lb_arm_pos_x_tag;
+        private System.Windows.Forms.Label lb_arm_pos_z;
+        private System.Windows.Forms.Label lb_arm_pos_y;
+        private System.Windows.Forms.Label lb_arm_pos_x;
     }
 }
 
