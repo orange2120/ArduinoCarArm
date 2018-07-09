@@ -5,6 +5,9 @@ Definition of pins and commands
 #ifndef DEFINITION_h
 #define DEFINITION_h
 
+//Serial port name(Serial,Serial1...etc)
+auto &SR = Serial1;
+
 //Commands definition
 #define MOT_A_SPD   'a'
 #define MOT_B_SPD   'c'

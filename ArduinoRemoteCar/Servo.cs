@@ -16,8 +16,11 @@ namespace ArduinoRemoteCar
             get { return servo_deg; }
             set
             {
-                servo_deg = value;
-                Update_degree();
+                if ((value <= 180) && (value >= 0))
+                {
+                    servo_deg = value;
+                    Update_degree();
+                }
             }
         }
 

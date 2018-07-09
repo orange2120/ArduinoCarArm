@@ -196,7 +196,7 @@ namespace ArduinoRemoteCar
         private void bt_forward_MouseUp(object sender, MouseEventArgs e)
         {
             bt_forward.ForeColor = SystemColors.ControlText;
-            //car.Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_back_MouseDown(object sender, MouseEventArgs e)
@@ -208,7 +208,7 @@ namespace ArduinoRemoteCar
         private void bt_back_MouseUp(object sender, MouseEventArgs e)
         {
             bt_back.ForeColor = SystemColors.ControlText;
-            //car.Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_left_MouseDown(object sender, MouseEventArgs e)
@@ -220,7 +220,7 @@ namespace ArduinoRemoteCar
         private void bt_left_MouseUp(object sender, MouseEventArgs e)
         {
             bt_left.ForeColor = SystemColors.ControlText;
-            //car.Soft_STOP();
+            car.Soft_STOP();
         }
 
         private void bt_right_MouseDown(object sender, MouseEventArgs e)
@@ -232,7 +232,7 @@ namespace ArduinoRemoteCar
         private void bt_right_MouseUp(object sender, MouseEventArgs e)
         {
             bt_right.ForeColor = SystemColors.ControlText;
-            //car.Soft_STOP();
+            car.Soft_STOP();
         }
 
         #endregion

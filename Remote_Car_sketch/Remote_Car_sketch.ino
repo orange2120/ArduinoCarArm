@@ -20,7 +20,7 @@ int i = 0;
 
 void setup()
 {	
-	Serial.begin(115200);
+	SR.begin(115200);
 	
 	mt.init();
 	arm.init();
@@ -28,99 +28,86 @@ void setup()
 
 void loop()
 {
-	if(Serial.available())
+	if(SR.available())
 	{
-		cmd = Serial.read();
-		while((incoming = Serial.read()) != '\n')
+		cmd = SR.read();
+		while((incoming = SR.read()) != '\n')
 		{
 			if(incoming != -1 && incoming >= '0' && incoming <= '9' && i<MAX_NUM_LEN)
 			{
 				num *= 10;
 				num += (incoming-'0');
-				//Serial.println(incoming-'0');
+				//SR.println(incoming-'0');
 				i++;
 			}
 		}
 		i = 0;
 		
-		//Serial.print(cmd);
+		//SR.print(cmd);
 		
 		switch(cmd)
 		{
 			case MOT_A_SPD:
 				{
 					mt.set_motorA_speed(num);
-					Serial.print("A");
-					Serial.print(mt.get_motorA_speed());
+					SR.print("A");
+					SR.print(mt.get_motorA_speed());
 				}
 			break;
 			case MOT_B_SPD:
 				{
 					mt.set_motorB_speed(num);
-					Serial.print("B");
-					Serial.print(mt.get_motorB_speed());
+					SR.print("B");
+					SR.print(mt.get_motorB_speed());
 				}
 			break;
 			case FORWARD_CMD:
 				mt.forward();
-				Serial.print("Forward");
+				SR.print("Forward");
 			break;
 			case BACK_CMD:
 				mt.backward();
-				Serial.print("Backward");
+				SR.print("Backward");
 			break;
 			case LEFT_CMD:
 				mt.turnLeft();
-				Serial.print("turnLeft");
+				SR.print("turnLeft");
 			break;
 			case RIGHT_CMD:
 				mt.turnRight();
-				Serial.print("turnRight");
+				SR.print("turnRight");
 			break;
 			case STOP_CMD:
 				mt.stop();
-				Serial.print("STOP");
+				SR.print("STOP");
 			break;
 			case BRAKE_CMD:
 				mt.brake();
-				Serial.print("Brake");
+				SR.print("Brake");
 			break;
 			//TODO:
 			case BASE_CMD:
 				arm.set_base_angle(num);
-				Serial.print(arm.get_base_angle());
+				SR.print(arm.get_base_angle());
 			break;
 			
 			case SHOULDER_CMD:
 				arm.set_shoulder_angle(num);
-				Serial.print(arm.get_shoulder_angle());
+				SR.print(arm.get_shoulder_angle());
 			break;
 			
 			case ELBOW_CMD:
 				arm.set_elbow_angle(num);
-				Serial.print(arm.get_elbow_angle());
+				SR.print(arm.get_elbow_angle());
 			break;
 			
 			case GRIPPER_CMD:
 				arm.set_gripper_angle(num);
-				Serial.print(arm.get_gripper_angle());
+				SR.print(arm.get_gripper_angle());
 			break;
-			
-			/*case '0':
-				set_base_angle(num);
-				Serial.print(get_base_angle());
-				// '0' = 48 in ascii
-
-			break;
-			case '1':
-			break;
-			case '2':
-			break;
-			case '3':
-			break;*/
 
 		}
-		Serial.println("");
+		SR.println("");
 		
 		num = 0;
 	}
