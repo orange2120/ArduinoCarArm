@@ -1,6 +1,9 @@
 #MS VS code dir
-.vscode
+.vscode/
 
 #Visual Studio temp file
 *.cache
 *.manifest
+
+#Exec
+*.exe

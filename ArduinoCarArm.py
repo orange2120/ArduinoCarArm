@@ -32,6 +32,7 @@ def cmd_handler(arg):
     ser.write(switcher.get(arg))
     #return switcher.get(arg, "\n")
 
+#Courtesy by Thomas @ https://stackoverflow.com/questions/12090503/listing-available-com-ports-with-python
 def get_serial_ports():
     """ Lists serial port names
  
