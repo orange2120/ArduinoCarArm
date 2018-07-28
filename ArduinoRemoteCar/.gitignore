@@ -1,0 +1,6 @@
+#MS VS code dir
+.vscode
+
+#Visual Studio temp file
+*.cache
+*.manifest

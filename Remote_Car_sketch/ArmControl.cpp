@@ -107,3 +107,20 @@ void Arm::home_gripper()
 	_sv_gripper.write(HOME_GRIPPER_DEG);
 	_deg_gripper = HOME_GRIPPER_DEG;
 }
+
+void Arm::gripper_open()
+{
+	_sv_gripper.write(GRIPPER_OPEN_DEG);
+	gripper_open = true;
+}
+
+void Arm::gripper_close()
+{
+	_sv_gripper.write(GRIPPER_CLOSE_DEG);
+	gripper_open = false;
+}
+
+bool Arm::gripper_IsOpen()
+{
+	return gripper_open;
+}

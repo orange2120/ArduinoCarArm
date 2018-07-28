@@ -23,6 +23,7 @@ auto &SR = Serial1;
 #define SHOULDER_CMD 'u'
 #define ELBOW_CMD   'e'
 #define GRIPPER_CMD 'g'
+#define GRIPPER_OC  'o'
 
 //Pins definition
 #define ENA 3

@@ -25,6 +25,9 @@ Library of Arm Servo motor control
 #define MIN_GRIPPER_DEG  50
 #define HOME_GRIPPER_DEG 100
 
+#define GRIPPER_OPEN_DEG 150
+#define GRIPPER_CLOSE_DEG 30
+
 
 class Arm
 {
@@ -33,6 +36,8 @@ class Arm
 		
 		uint8_t _pin_base, _pin_shoulder, _pin_elbow, _pin_gripper;
 		int _deg_base = 100, _deg_shoulder = 100, _deg_elbow = 100, _deg_gripper =100;
+
+		bool gripper_open = false;
 		
 	
 	public:
@@ -54,6 +59,10 @@ class Arm
 		void home_shoulder();
 		void home_elbow();
 		void home_gripper();
+
+		void gripper_open();
+		void gripper_close();
+		bool gripper_IsOpen();
 };
 
 #endif

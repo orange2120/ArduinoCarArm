@@ -106,6 +106,19 @@ void loop()
 				SR.print(arm.get_gripper_angle());
 			break;
 
+			case GRIPPER_OC:
+				if(arm.gripper_IsOpen())
+				{
+					gripper_close();
+					SR.print("Gripper close");
+				}
+				else
+				{
+					gripper_open();
+					SR.print("Gripper open");
+				}
+			break;
+
 		}
 		SR.println("");
 		
