@@ -133,9 +133,9 @@ get_serial_ports()
 
 port = input("Port(tty***):")
 baud = input("Baudrate:")
-port = "/dev/"+port
-
-print("Port:"+port+",Baud:"+baud)
+#port = "/dev/"+port
+print (type(baud))
+#print("Port:"+port+",Baud:"+baud)
 
 try:
     ser = serial.Serial(port, baud, timeout=1)

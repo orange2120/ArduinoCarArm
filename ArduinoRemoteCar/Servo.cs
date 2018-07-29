@@ -7,7 +7,7 @@ namespace ArduinoRemoteCar
 {
     public abstract class Servo// : Arm
     {
-        private int servo_deg = 0;
+        private int servo_deg = 100;
         private int servo_home = 100; //Home position
         public string CMD { get; set; }
 

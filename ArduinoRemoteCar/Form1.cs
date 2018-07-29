@@ -255,24 +255,32 @@ namespace ArduinoRemoteCar
         {
             bt_arm_left.ForeColor = Color.Yellow;
             arm.base_.Degree -= Command.ARM_MOVE_STEP;
+            tbar_servo1.Value = arm.base_.Degree;
+            lb_sv1_deg.Text = Convert.ToString(arm.base_.Degree);
         }
 
         private void bt_arm_right_MouseDown(object sender, MouseEventArgs e)
         {
             bt_arm_right.ForeColor = Color.Yellow;
             arm.base_.Degree += Command.ARM_MOVE_STEP;
+            tbar_servo1.Value = arm.base_.Degree;
+            lb_sv1_deg.Text = Convert.ToString(arm.base_.Degree);
         }
 
         private void bt_arm_fw_MouseDown(object sender, MouseEventArgs e)
         {
             bt_arm_fw.ForeColor = Color.Yellow;
             arm.shoulder.Degree += Command.ARM_MOVE_STEP;
+            tbar_servo2.Value = arm.shoulder.Degree;
+            lb_sv2_deg.Text = Convert.ToString(arm.shoulder.Degree);
         }
 
         private void bt_arm_back_MouseDown(object sender, MouseEventArgs e)
         {
             bt_arm_back.ForeColor = Color.Yellow;
             arm.shoulder.Degree -= Command.ARM_MOVE_STEP;
+            tbar_servo2.Value = arm.shoulder.Degree;
+            lb_sv2_deg.Text = Convert.ToString(arm.shoulder.Degree);
         }
 
         private void bt_arm_fw_MouseUp(object sender, MouseEventArgs e)
@@ -299,12 +307,16 @@ namespace ArduinoRemoteCar
         {
             bt_arm_up.ForeColor = Color.Yellow;
             arm.elbow.Degree += Command.ARM_MOVE_STEP;
+            tbar_servo3.Value = arm.elbow.Degree;
+            lb_sv3_deg.Text = Convert.ToString(arm.elbow.Degree);
         }
 
         private void bt_arm_down_MouseDown(object sender, MouseEventArgs e)
         {
             bt_arm_down.ForeColor = Color.Yellow;
             arm.elbow.Degree -= Command.ARM_MOVE_STEP;
+            tbar_servo3.Value = arm.elbow.Degree;
+            lb_sv3_deg.Text = Convert.ToString(arm.elbow.Degree);
         }
 
         private void bt_arm_up_MouseUp(object sender, MouseEventArgs e)
