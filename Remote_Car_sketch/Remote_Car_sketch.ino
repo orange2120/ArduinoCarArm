@@ -20,7 +20,7 @@ int i = 0;
 
 void setup()
 {	
-	SR.begin(115200);
+	SR.begin(BAUD_RATE);
 	
 	mt.init();
 	arm.init();
@@ -85,7 +85,6 @@ void loop()
 				mt.brake();
 				SR.print("Brake");
 			break;
-			//TODO:
 			case BASE_CMD:
 				arm.set_base_angle(num);
 				SR.print(arm.get_base_angle());
@@ -109,12 +108,12 @@ void loop()
 			case GRIPPER_OC:
 				if(arm.gripper_IsOpen())
 				{
-					gripper_close();
+					arm.gripper_close();
 					SR.print("Gripper close");
 				}
 				else
 				{
-					gripper_open();
+					arm.gripper_open();
 					SR.print("Gripper open");
 				}
 			break;

@@ -111,16 +111,16 @@ void Arm::home_gripper()
 void Arm::gripper_open()
 {
 	_sv_gripper.write(GRIPPER_OPEN_DEG);
-	gripper_open = true;
+	gripper_open_state = true;
 }
 
 void Arm::gripper_close()
 {
 	_sv_gripper.write(GRIPPER_CLOSE_DEG);
-	gripper_open = false;
+	gripper_open_state = false;
 }
 
 bool Arm::gripper_IsOpen()
 {
-	return gripper_open;
+	return gripper_open_state;
 }

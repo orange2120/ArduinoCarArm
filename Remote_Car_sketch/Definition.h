@@ -7,6 +7,7 @@ Definition of pins and commands
 
 //Serial port name(Serial,Serial1...etc)
 auto &SR = Serial1;
+#define BAUD_RATE 115200
 
 //Commands definition
 #define MOT_A_SPD   'a'

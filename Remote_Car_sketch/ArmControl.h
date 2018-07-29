@@ -37,7 +37,7 @@ class Arm
 		uint8_t _pin_base, _pin_shoulder, _pin_elbow, _pin_gripper;
 		int _deg_base = 100, _deg_shoulder = 100, _deg_elbow = 100, _deg_gripper =100;
 
-		bool gripper_open = false;
+		bool gripper_open_state = false;
 		
 	
 	public:
