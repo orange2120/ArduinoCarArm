@@ -1,6 +1,8 @@
 /*********************************
-Library of Car Motor
-*********************************/
+ *Arduino Car Arm
+ *Copyright(c) 2018 NTU Maker
+ *Library of Car Motor
+ ********************************/
 
 #ifndef CarMotor_h
 #define CarMotor_h
@@ -8,6 +10,7 @@ Library of Car Motor
 #include <stdint.h>
 #include <Arduino.h>
 
+//Car motors class(Correspond to L298N module)
 class CarMotor
 {
 	private:

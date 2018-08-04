@@ -1,5 +1,7 @@
-/*
- * L298N H-bridge motor controller test program
+/**
+ *Arduino Car Arm
+ *Copyright(c) 2018 NTU Maker
+ * L298N H-bridge motor controller program
  *
  */
 #include <Servo.h>
@@ -7,16 +9,18 @@
 #include "CarMotor.h"
 #include "ArmControl.h"
 
-CarMotor mt(IN1, IN2, IN3, IN4, ENA, ENB);
+CarMotor mt(IN1, IN2, IN3, IN4, ENA, ENB); //Car object
 
-Arm arm(SV1_PIN, SV2_PIN, SV3_PIN, SV4_PIN);
+Arm arm(SV1_PIN, SV2_PIN, SV3_PIN, SV4_PIN); //Arm object
 
 //Command & Character ...
-#define MAX_NUM_LEN 3
-char incoming = '0';
-char cmd = '0';
-int num= 0;
+#define MAX_NUM_LEN 3 //MAX input command number length
+char incoming = '0';  //Temp character storage
+char cmd = '0';       //Command prefix
+int num= 0;           //Number command(PWM,angle...)
 int i = 0;
+
+//Serial object -> SR
 
 void setup()
 {	
@@ -28,6 +32,7 @@ void setup()
 
 void loop()
 {
+	//Receiving characters and split commands
 	if(SR.available())
 	{
 		cmd = SR.read();
@@ -44,7 +49,9 @@ void loop()
 		i = 0;
 		
 		//SR.print(cmd);
-		
+
+		//Judging commands and execute
+
 		switch(cmd)
 		{
 			case MOT_A_SPD:
@@ -121,6 +128,6 @@ void loop()
 		}
 		SR.println("");
 		
-		num = 0;
+		num = 0; //Reset number command
 	}
 }

@@ -1,6 +1,8 @@
 /*********************************
-Library of Arm Servo motor control
-*********************************/
+ *Arduino Car Arm
+ *Copyright(c) 2018 NTU Maker
+ *Library of Arm Servo motor control
+ ********************************/
 
 #ifndef ArmControl_h
 #define ArmControl_h
@@ -9,6 +11,7 @@ Library of Arm Servo motor control
 #include <Arduino.h>
 #include <Servo.h>
 
+//Motors angle limits
 #define MAX_BASE_DEG     180
 #define MIN_BASE_DEG     0
 #define HOME_BASE_DEG    100
@@ -28,7 +31,7 @@ Library of Arm Servo motor control
 #define GRIPPER_OPEN_DEG 150
 #define GRIPPER_CLOSE_DEG 30
 
-
+//Arm class
 class Arm
 {
 	private:
