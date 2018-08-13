@@ -6,7 +6,7 @@ Definition of pins and commands
 #define DEFINITION_h
 
 //Serial port name(Serial,Serial1...etc)
-auto &SR = Serial1;
+auto &SR = Serial;
 #define BAUD_RATE 115200
 
 //Commands definition
@@ -29,17 +29,17 @@ auto &SR = Serial1;
 
 //Pins definition
 //L298N module
-#define ENA 3
+#define ENA 6
 #define ENB 5
-#define IN1 13
-#define IN2 12
-#define IN3 11
-#define IN4 10
+#define IN1 12
+#define IN2 11
+#define IN3 10
+#define IN4 9
 
 //Servo motor                       
-#define SV1_PIN 7 //Base
-#define SV2_PIN 2 //Shoulder
-#define SV3_PIN 6 //Elbow
-#define SV4_PIN 4 //Gripper
+#define SV1_PIN 2 //Base
+#define SV2_PIN 3 //Shoulder
+#define SV3_PIN 4 //Elbow
+#define SV4_PIN 7 //Gripper
 
 #endif

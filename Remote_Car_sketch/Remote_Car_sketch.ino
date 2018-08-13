@@ -17,8 +17,10 @@ Arm arm(SV1_PIN, SV2_PIN, SV3_PIN, SV4_PIN); //Arm object
 #define MAX_NUM_LEN 3 //MAX input command number length
 char incoming = '0';  //Temp character storage
 char cmd = '0';       //Command prefix
-int num= 0;           //Number command(PWM,angle...)
+int num = 0;		  //Number command(PWM,angle...)
 int i = 0;
+char checksum = 'd';
+unsigned long watchdog = 0;
 
 //Serial object -> SR
 
