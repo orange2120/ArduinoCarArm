@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gb_1 = new System.Windows.Forms.GroupBox();
             this.bt_monitor = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@
             this.bt_arm_back = new System.Windows.Forms.Button();
             this.bt_arm_left = new System.Windows.Forms.Button();
             this.bt_arm_fw = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gb_1.SuspendLayout();
             this.gb_dir_cmd.SuspendLayout();
             this.gb_state.SuspendLayout();
@@ -480,6 +482,10 @@
             this.bt_arm_fw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_arm_fw_MouseDown);
             this.bt_arm_fw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bt_arm_fw_MouseUp);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -567,6 +573,7 @@
         private System.Windows.Forms.Label lb_arm_pos_z;
         private System.Windows.Forms.Label lb_arm_pos_y;
         private System.Windows.Forms.Label lb_arm_pos_x;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

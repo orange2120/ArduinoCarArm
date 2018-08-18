@@ -1,4 +1,5 @@
 /**
+*
  *Arduino Car Arm
  *Copyright(c) 2018 NTU Maker
  * L298N H-bridge motor controller program
@@ -131,5 +132,11 @@ void loop()
 		SR.println("");
 		
 		num = 0; //Reset number command
+	}
+	
+	if(millis()-watchdog > KEEPALIVE_INTERVAL)
+	{
+		SR.println(checksum);
+		watchdog = millis();
 	}
 }

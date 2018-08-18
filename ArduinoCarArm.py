@@ -61,10 +61,6 @@ def get_serial_ports():
         except (OSError, serial.SerialException):
             pass
     return result
- 
- 
-if __name__ == '__main__':
-    print(get_serial_ports())
 
 def cleanup():
     ser.close()
@@ -77,14 +73,19 @@ def on_press(key):
 
     if key == keyboard.Key.up:
         cmd_handler('FORWARD_CMD')
+        print('Forward')
     elif key == keyboard.Key.down:
         cmd_handler('BACK_CMD')
+        print('Backward')
     elif key == keyboard.Key.left:
         cmd_handler('LEFT_CMD')
+        print('Turn left')
     elif key == keyboard.Key.right:
         cmd_handler('RIGHT_CMD')
+        print('Turn right')
     elif key == ".":
         cmd_handler('STOP_CMD')
+        print("STOP")
     elif key == "a":
         _base_deg -= move_step
         cmd_handler('BASE_CMD')
@@ -127,25 +128,35 @@ def on_release(key):
 
 #atexit.register(cleanup)
 
-print("Available serial ports:")
+#
+#Main program start here
+#
+def main():
+	print("Available serial ports:")
 
-get_serial_ports()
+	get_serial_ports()
 
-port = input("Port(tty***):")
-baud = input("Baudrate:")
-#port = "/dev/"+port
-print (type(baud))
-#print("Port:"+port+",Baud:"+baud)
+	port = input("Port(tty***/COM***):")
+	baud = input("Baudrate:")
+	#port = "/dev/"+port
+	print (type(baud))
+	#print("Port:"+port+",Baud:"+baud)
 
-try:
-    ser = serial.Serial(port, baud, timeout=1)
-except serial.SerialException:
-    print("Connect error")
-    sys.exit(0)
+	try:
+		ser = serial.Serial(port, baud, timeout=3)
+	except serial.SerialException:
+		print("Connect error")
+		sys.exit(0)
 
-while True:
-    with keyboard.Listener(on_press = on_press, on_release = on_release) as listener:
-        listener.join()
-    #TODO:Print serial Rx message
-    #if 
-    print(ser.readline())
+	try:
+		while True:
+			with keyboard.Listener(on_press = on_press, on_release = on_release) as listener:
+				listener.join()
+			#TODO:Print serial Rx message
+			#if 
+			#print(ser.readline())
+	except KeyboardInterrupt:
+		pass
+
+if __name__ == '__main__':
+	main()
