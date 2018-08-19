@@ -7,7 +7,7 @@ Definition of pins and commands
 
 //Serial port name(Serial,Serial1...etc)
 auto &SR = Serial;
-#define BAUD_RATE 115200
+#define BAUD_RATE 9600
 
 //Send keep alive signal to serial port to detect bluetooth is disconnected or not
 #define KEEPALIVE_INTERVAL 100

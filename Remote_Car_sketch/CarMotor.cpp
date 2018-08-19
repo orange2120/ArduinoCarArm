@@ -23,6 +23,8 @@ void CarMotor::init()
 	pinMode(_pin_IN2, OUTPUT);
 	pinMode(_pin_IN3, OUTPUT);
 	pinMode(_pin_IN4, OUTPUT);
+	analogWrite(_pin_ENA, _pwm_A);
+	analogWrite(_pin_ENB, _pwm_B);
 }
 
 //Set motor A PWM value

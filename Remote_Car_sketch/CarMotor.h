@@ -16,8 +16,8 @@ class CarMotor
 	private:
 		uint8_t _pin_IN1,_pin_IN2,_pin_IN3,_pin_IN4;
 		uint8_t _pin_ENA,_pin_ENB;
-		int _pwm_A = 0;
-		int _pwm_B = 0;
+		int _pwm_A = 150;
+		int _pwm_B = 150;
 	
 	public:
 		CarMotor(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t);
