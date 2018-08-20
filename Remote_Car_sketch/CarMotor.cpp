@@ -83,7 +83,7 @@ void CarMotor::backward()
 //Car turn left
 void CarMotor::turnLeft()
 {
-    digitalWrite(_pin_IN1, LOW);
+    digitalWrite(_pin_IN1, HIGH);
     digitalWrite(_pin_IN2, LOW);
     digitalWrite(_pin_IN3, LOW);
     digitalWrite(_pin_IN4, HIGH);	
@@ -94,7 +94,7 @@ void CarMotor::turnRight()
 {
     digitalWrite(_pin_IN1, LOW);
     digitalWrite(_pin_IN2, HIGH);
-    digitalWrite(_pin_IN3, LOW);
+    digitalWrite(_pin_IN3, HIGH);
     digitalWrite(_pin_IN4, LOW);
 }
 
