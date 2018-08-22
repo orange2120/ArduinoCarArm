@@ -20,47 +20,47 @@ Arduino藍芽遙控車與arm的神奇組合
 
 The C# version controller program of CarArm
 
-*Connect:
-	*Display available Baudrate,COM port,
-	*`Rescan` ports
-	*`Connect`, `Disconnect` current serial port
-*Direction control:
-	*Go forward  `▲`
-	*Go ackward  `▼`
-	*Turn left   `◄`
-	*Turn right  `►`
-*Motor speed control:
-	*Adjust PWM value of motor A,B
-*Arm control:
-	*Move forward         `▲`
-	*Move backward        `▼`
-	*Move conterclockwise `◄`
-	*Move clockwise       `►`
-	*Elevate              `▲`
-	*Descend              `▼`
-	*Gripper open/close   `■`
-	*`Homing`
-	*Manual mode(adjust servo motor angle)
-*Connection state indicate:
-	*Display current connection state ex:`Disconnected`, `Connected`.
+* Connect:
+	* Display available Baudrate,COM port,
+	* `Rescan` ports
+	* `Connect`, `Disconnect` current serial port
+* Direction control:
+	* Go forward  `▲`
+	* Go ackward  `▼`
+	* Turn left   `◄`
+	* Turn right  `►`
+* Motor speed control:
+	* Adjust PWM value of motor A,B
+* Arm control:
+	* Move forward         `▲`
+	* Move backward        `▼`
+	* Move conterclockwise `◄`
+	* Move clockwise       `►`
+	* Elevate              `▲`
+	* Descend              `▼`
+	* Gripper open/close   `■`
+	* `Homing`
+	* Manual mode(adjust servo motor angle)
+* Connection state indicate:
+	* Display current connection state ex:`Disconnected`, `Connected`.
 	
 Control buttons will be enable after success connection.
 
 CarArm also accepts keyboard interrupt, using up`↑`, down`↓`, left`←`, right`→`.
 *Direction control:
-	*Go forward `↑`
-	*Go ackward `↓`
-	*Turn left  `←`
-	*Turn right `→`
-	*Brake      `.`
+	* Go forward `↑`
+	* Go ackward `↓`
+	* Turn left  `←`
+	* Turn right `→`
+	* Brake      `.`
 *Arm control:
-	*Move forward         `w`
-	*Move backward        `s`
-	*Move conterclockwise `a`
-	*Move clockwise       `d`
-	*Elevate              `q`
-	*Descend              `e`
-	*Gripper open/close   `g`
+	* Move forward         `w`
+	* Move backward        `s`
+	* Move conterclockwise `a`
+	* Move clockwise       `d`
+	* Elevate              `q`
+	* Descend              `e`
+	* Gripper open/close   `g`
 	
 實作連線控制器，操作遙控車與手臂
 
@@ -95,12 +95,12 @@ Please refer to [`xue-ru-workshop`](https://github.com/stationaryfront/xue-ru-wo
 The Arduino program on the CarArm
 
 * Remote_Car_sketch.ino：Arduino main program
-	*Serial connection
-	*Serial string split
+	* Serial connection
+	* Serial string split
 * Definition.h：Definition of commands, constants
-	*Serial port name, baudrate
-	*Command characters
-	*Hardware pins
+	* Serial port name, baudrate
+	* Command characters
+	* Hardware pins
 * ArmControl.h/ArmControl.cpp：Arm control functions
 * CarMotor.h/CarMotor.cpp：Remote car control functions
 
