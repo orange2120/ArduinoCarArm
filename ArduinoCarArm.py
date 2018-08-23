@@ -31,6 +31,7 @@ _shoulder_deg = 100
 _elbow_deg = 100
 _gripper_deg = 100
 ser = None
+KEEPALIVE_CHAR = 'd'
 
 ### method ###
 def cmd_handler(arg1, arg2=None):
@@ -110,6 +111,13 @@ def on_press(key):
         cmd_handler('ELBOW_CMD', _elbow_deg)
     elif str(key)[1] == 'o':
         cmd_handler('GRIPPER_OC')
+    elif str(key)[1] == 'f':
+        _pwm_A = input("Motor A:")
+        cmd_handler('MOT_A_SPD', _pwm_A)
+    elif str(key)[1] == 'g':
+        _pwm_B = input("Motor B:")
+        cmd_handler('MOT_B_SPD', _pwm_B)
+
 
 def on_release(key):
     if key == keyboard.Key.up:
