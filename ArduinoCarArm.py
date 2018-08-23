@@ -33,8 +33,10 @@ _shoulder_deg = 100
 _elbow_deg = 100
 _gripper_deg = 100
 ser = None
+conn = False
 kill = False
-lock = threading.Lock()
+lock1 = threading.Lock()
+lock2 = threading.Lock()
 
 ### method ###
 def cmd_handler(arg1, arg2=None):
@@ -98,71 +100,85 @@ def check_bt():
     typer = Controller()
     
     while not access_kill():
-        typer.press(Key.esc)
+        if access_conn():
+            typer.press(Key.esc)
         time.sleep(1)
-        
+
+def access_conn(write=None):
+    global conn
+    lock1.acquire()
+    if write != None:
+        conn = write
+    _return = conn
+    lock1.release()
+    return _return
+
 def access_kill(write=None):
     global kill
-    lock.acquire()
-    if write:
+    lock2.acquire()
+    if write != None:
         kill = write
     _return = kill
-    lock.release()
+    lock2.release()
     return _return
+
 
 def on_press(key):
     global _base_deg, _shoulder_deg, _elbow_deg
-
     if not ser or not ser.is_open:
         return False
-    else:
-        if key == Key.up:
-            cmd_handler('FORWARD_CMD')
-            print('Forward')
-        elif key == Key.down:
-            cmd_handler('BACK_CMD')
-            print('Backward')
-        elif key == Key.left:
-            cmd_handler('LEFT_CMD')
-            print('Turn left')
-        elif key == Key.right:
-            cmd_handler('RIGHT_CMD')
-            print('Turn right')
-        elif str(key)[1] == '.':
-            cmd_handler('STOP_CMD')
-            print("STOP")
-        elif str(key)[1] == 'a':
-            _base_deg -= move_step
-            cmd_handler('BASE_CMD', _base_deg)
-        elif str(key)[1] == 'd':
-            _base_deg += move_step
-            cmd_handler('BASE_CMD', _base_deg)
-        elif str(key)[1] == 'w':
-            _shoulder_deg += move_step
-            cmd_handler('SHOULDER_CMD', _shoulder_deg)
-        elif str(key)[1] == 's':
-            _shoulder_deg -= move_step
-            cmd_handler('SHOULDER_CMD', _shoulder_deg)
-        elif str(key)[1] == 'q':
-            _elbow_deg -= move_step
-            cmd_handler('ELBOW_CMD', _elbow_deg)
-        elif str(key)[1] == 'e':
-            _elbow_deg += move_step
-            cmd_handler('ELBOW_CMD', _elbow_deg)
-        elif str(key)[1] == 'o':
-            cmd_handler('GRIPPER_OC')
-        elif str(key)[1] == 'f':
-            _pwm_A = input("Motor A:")
-            cmd_handler('MOT_A_SPD', _pwm_A)
-        elif str(key)[1] == 'g':
-            _pwm_B = input("Motor B:")
-            cmd_handler('MOT_B_SPD', _pwm_B)
-        elif str(key)[1] == 'x':
-            access_kill(True)
-            return False # Stop listener
+    if key == Key.up:
+        cmd_handler('FORWARD_CMD')
+        print('Forward')
+    elif key == Key.down:
+        cmd_handler('BACK_CMD')
+        print('Backward')
+    elif key == Key.left:
+        cmd_handler('LEFT_CMD')
+        print('Turn left')
+    elif key == Key.right:
+        cmd_handler('RIGHT_CMD')
+        print('Turn right')
+    elif str(key)[1] == '.':
+        cmd_handler('STOP_CMD')
+        print("STOP")
+    elif str(key)[1] == 'a':
+        _base_deg -= move_step
+        cmd_handler('BASE_CMD', _base_deg)
+    elif str(key)[1] == 'd':
+        _base_deg += move_step
+        cmd_handler('BASE_CMD', _base_deg)
+    elif str(key)[1] == 'w':
+        _shoulder_deg += move_step
+        cmd_handler('SHOULDER_CMD', _shoulder_deg)
+    elif str(key)[1] == 's':
+        _shoulder_deg -= move_step
+        cmd_handler('SHOULDER_CMD', _shoulder_deg)
+    elif str(key)[1] == 'q':
+        _elbow_deg -= move_step
+        cmd_handler('ELBOW_CMD', _elbow_deg)
+    elif str(key)[1] == 'e':
+        _elbow_deg += move_step
+        cmd_handler('ELBOW_CMD', _elbow_deg)
+    elif str(key)[1] == 'o':
+        cmd_handler('GRIPPER_OC')
+    elif str(key)[1] == 'f':
+        access_conn(False)
+        _pwm_A = input("Motor A:")
+        access_conn(True)
+        cmd_handler('MOT_A_SPD', _pwm_A)
+    elif str(key)[1] == 'g':
+        access_conn(False)
+        _pwm_B = input("Motor B:")
+        access_conn(True)
+        cmd_handler('MOT_B_SPD', _pwm_B)
+    elif str(key)[1] == 'x':
+        access_kill(True)
+        return False # Stop listener
             
-
 def on_release(key):
+    if not ser or not ser.is_open:
+        return False
     if key == Key.up:
         cmd_handler('STOP_CMD')
     elif key == Key.down:
@@ -184,12 +200,14 @@ def main():
     while not access_kill():
         get_ports_routine()
         connect_routine()
-
-        if access_kill():
-                break
         
-        with Listener(on_press = on_press, on_release = on_release) as listener:
-            listener.join()
+        try:
+            with Listener(on_press = on_press, on_release = on_release) as listener:
+                access_conn(True)
+                listener.join()
+        except:
+            pass
+        access_conn(False)
 
     checkthread.join()
     if ser:
@@ -197,3 +215,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
