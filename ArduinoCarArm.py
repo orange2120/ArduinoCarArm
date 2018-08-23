@@ -4,6 +4,8 @@ import atexit
 import serial
 import serial.tools.list_ports
 from pynput import keyboard
+import threading
+import time
 
 ### global constants ###
 move_step = 5
@@ -31,7 +33,8 @@ _shoulder_deg = 100
 _elbow_deg = 100
 _gripper_deg = 100
 ser = None
-KEEPALIVE_CHAR = 'd'
+esc = False
+lock = threading.Lock()
 
 ### method ###
 def cmd_handler(arg1, arg2=None):
@@ -69,55 +72,79 @@ def get_serial_ports():
             pass
     return result
 
-def cleanup():
-    ser.close()
-    print("Cleanup!")
+def connect_routine()
+    global ser
+    print("Available serial ports:{}".format(get_serial_ports()))
+    port = input("Port(tty***/COM***):")
+    baud = input("Baudrate:")
+
+    try:
+        ser = serial.Serial(port, baud, timeout=30)
+    except serial.SerialException:
+        print("Connect error")
+        sys.exit(0)
+	
+def check_bt():
+    typer = keyboard.Controller()
+    while not read_shared_data("esc"):
+        typer.press(Key.space)
+	time.sleep(1)
+
+def access_esc(write=None):
+    lock.acquire()
+    if write:
+	esc = write
+    _return = esc
+    lock.release()
+    return _return
 
 def on_press(key):
     global _base_deg, _shoulder_deg, _elbow_deg
     
-    if key == keyboard.Key.up:
-        cmd_handler('FORWARD_CMD')
-        print('Forward')
-    elif key == keyboard.Key.down:
-        cmd_handler('BACK_CMD')
-        print('Backward')
-    elif key == keyboard.Key.left:
-        cmd_handler('LEFT_CMD')
-        print('Turn left')
-    elif key == keyboard.Key.right:
-        cmd_handler('RIGHT_CMD')
-        print('Turn right')
-    elif str(key)[1] == '.':
-        cmd_handler('STOP_CMD')
-        print("STOP")
-    elif str(key)[1] == 'a':
-        _base_deg -= move_step
-        cmd_handler('BASE_CMD', _base_deg)
-    elif str(key)[1] == 'd':
-        _base_deg += move_step
-        cmd_handler('BASE_CMD', _base_deg)
-    elif str(key)[1] == 'w':
-        _shoulder_deg += move_step
-        cmd_handler('SHOULDER_CMD', _shoulder_deg)
-    elif str(key)[1] == 's':
-        _shoulder_deg -= move_step
-        cmd_handler('SHOULDER_CMD', _shoulder_deg)
-    elif str(key)[1] == 'q':
-        _elbow_deg -= move_step
-        cmd_handler('ELBOW_CMD', _elbow_deg)
-    elif str(key)[1] == 'e':
-        _elbow_deg += move_step
-        cmd_handler('ELBOW_CMD', _elbow_deg)
-    elif str(key)[1] == 'o':
-        cmd_handler('GRIPPER_OC')
-    elif str(key)[1] == 'f':
-        _pwm_A = input("Motor A:")
-        cmd_handler('MOT_A_SPD', _pwm_A)
-    elif str(key)[1] == 'g':
-        _pwm_B = input("Motor B:")
-        cmd_handler('MOT_B_SPD', _pwm_B)
-
+    if not ser.is_open():
+	return False
+    else:
+        elif key == keyboard.Key.up:
+            cmd_handler('FORWARD_CMD')
+            print('Forward')
+        elif key == keyboard.Key.down:
+            cmd_handler('BACK_CMD')
+            print('Backward')
+        elif key == keyboard.Key.left:
+            cmd_handler('LEFT_CMD')
+            print('Turn left')
+        elif key == keyboard.Key.right:
+            cmd_handler('RIGHT_CMD')
+            print('Turn right')
+        elif str(key)[1] == '.':
+            cmd_handler('STOP_CMD')
+            print("STOP")
+        elif str(key)[1] == 'a':
+            _base_deg -= move_step
+            cmd_handler('BASE_CMD', _base_deg)
+        elif str(key)[1] == 'd':
+            _base_deg += move_step
+            cmd_handler('BASE_CMD', _base_deg)
+        elif str(key)[1] == 'w':
+            _shoulder_deg += move_step
+            cmd_handler('SHOULDER_CMD', _shoulder_deg)
+        elif str(key)[1] == 's':
+            _shoulder_deg -= move_step
+            cmd_handler('SHOULDER_CMD', _shoulder_deg)
+        elif str(key)[1] == 'q':
+            _elbow_deg -= move_step
+            cmd_handler('ELBOW_CMD', _elbow_deg)
+        elif str(key)[1] == 'e':
+            _elbow_deg += move_step
+            cmd_handler('ELBOW_CMD', _elbow_deg)
+        elif str(key)[1] == 'o':
+            cmd_handler('GRIPPER_OC')
+        elif str(key)[1] == 'f':
+            _pwm_A = input("Motor A:")
+            cmd_handler('MOT_A_SPD', _pwm_A)
+        elif str(key)[1] == 'g':
+            _pwm_B = input("Motor B:")
+            cmd_handler('MOT_B_SPD', _pwm_B)
 
 def on_release(key):
     if key == keyboard.Key.up:
@@ -129,6 +156,7 @@ def on_release(key):
     elif key == keyboard.Key.right:
         cmd_handler('STOP_CMD')
     elif key == keyboard.Key.esc:
+	access_esc(True)
         return False # Stop listener
 
 #atexit.register(cleanup)
@@ -137,20 +165,17 @@ def on_release(key):
 #Main program start here
 #
 def main():
-    global ser
-    print("Available serial ports:{}".format(get_serial_ports()))
+    global esc
 
-    port = input("Port(tty***/COM***):")
-    baud = input("Baudrate:")
+    checkthread = threading.Thread(target = check_bt)
 
-    try:
-        ser = serial.Serial(port, baud, timeout=3)
-    except serial.SerialException:
-        print("Connect error")
-        sys.exit(0)
-
-    with keyboard.Listener(on_press = on_press, on_release = on_release) as listener:
-        listener.join()
+    while not access_esc():
+	connect_routine()
+        with keyboard.Listener(on_press = on_press, on_release = on_release) as listen:
+            listener.join()
+    
+    checkthread.join()
+    ser.close()
 
 if __name__ == '__main__':
     main()
