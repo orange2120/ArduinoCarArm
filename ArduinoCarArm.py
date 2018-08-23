@@ -95,7 +95,6 @@ def connect_routine():
 
 	
 def check_bt():
-    main_thread = threading.main_thread()
     typer = Controller()
     
     while not access_kill():
