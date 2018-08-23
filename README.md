@@ -1,24 +1,25 @@
 # ArduinoCarArm
 
-![CarArm](https://github.com/orange2120/ArduinoCarArm/raw/master/DSC_1353.JPG)
+![CarArm](https://github.com/orange2120/ArduinoCarArm/img/raw/master/DSC_1353.JPG)
 
 Arduino bluetooh remote car combined with arm.
 
 The project includes following C#、Python、Android and Arduino programs.
-* C#：ArduinoCarArm.sln 
-* Python：ArduinoCarArm.py
-* Arduino：Remote_Car_sketch
 
 Arduino藍芽遙控車與arm的神奇組合
-
 此專案包含C#、Python、Android和 Arduino程式
+
 * C#：ArduinoCarArm.sln 
 * Python：ArduinoCarArm.py
 * Arduino：Remote_Car_sketch
+
+
 
 ## C# "ArduinoCarArm"
 
 The C# version controller program of CarArm
+
+![C# version controller program](https://github.com/orange2120/ArduinoCarArm/img/raw/master/CS_screenshot.png)
 
 * Connect:
 	* Display available Baudrate,COM port,
@@ -32,13 +33,13 @@ The C# version controller program of CarArm
 * Motor speed control:
 	* Adjust PWM value of motor A,B
 * Arm control:
-	* Move forward         `▲`
-	* Move backward        `▼`
-	* Move conterclockwise `◄`
-	* Move clockwise       `►`
-	* Elevate              `▲`
-	* Descend              `▼`
-	* Gripper open/close   `■`
+	* Move forward`▲`
+	* Move backward`▼`
+	* Rotate conterclockwise `◄`
+	* Rotate clockwise`►`
+	* Elevate `▲`
+	* Descend`▼`
+	* Gripper open/close`■`
 	* `Homing`
 	* Manual mode(adjust servo motor angle)
 * Connection state indicate:
@@ -46,21 +47,21 @@ The C# version controller program of CarArm
 	
 Control buttons will be enable after success connection.
 
-CarArm also accepts keyboard interrupt, using up`↑`, down`↓`, left`←`, right`→`.
-*Direction control:
+CarArm also accepts keyboard interrupt, as following:
+* Direction control:
 	* Go forward `↑`
 	* Go ackward `↓`
 	* Turn left  `←`
 	* Turn right `→`
 	* Brake      `.`
-*Arm control:
-	* Move forward         `w`
-	* Move backward        `s`
-	* Move conterclockwise `a`
-	* Move clockwise       `d`
-	* Elevate              `q`
-	* Descend              `e`
-	* Gripper open/close   `g`
+* Arm control:
+	* Move forward `w`
+	* Move backward `s`
+	* Rotate conterclockwise `a`
+	* Rotate clockwise `d`
+	* Elevate `q`
+	* Descend `e`
+	* Gripper open/close `g`
 	
 實作連線控制器，操作遙控車與手臂
 
@@ -93,7 +94,6 @@ Please refer to [`xue-ru-workshop`](https://github.com/stationaryfront/xue-ru-wo
 ## Arduino sketch "Remote_Car_Arm"
 
 The Arduino program on the CarArm
-
 * Remote_Car_sketch.ino：Arduino main program
 	* Serial connection
 	* Serial string split
@@ -105,7 +105,6 @@ The Arduino program on the CarArm
 * CarMotor.h/CarMotor.cpp：Remote car control functions
 
 遙控車端Arduino程式，採物件導向撰寫，架構分為以下部份
-
 * Remote_Car_sketch.ino：Arduino主程式，包含Serial字串拆解、判斷
 * Definition.h：Serial相關設定、遙控指令字元定義、硬體pin定義
 * ArmControl.h/ArmControl.cpp：手臂控制函式
