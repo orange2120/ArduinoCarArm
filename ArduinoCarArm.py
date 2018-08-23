@@ -3,7 +3,9 @@ import glob
 import atexit
 import serial
 import serial.tools.list_ports
-from pynput import keyboard
+from pynput.keyboard import Key, Controller, Listener
+import threading
+import time
 
 ### global constants ###
 move_step = 5
@@ -16,7 +18,7 @@ switcher = {
         'LEFT_CMD':    'l',
         'RIGHT_CMD':   'r',
         'STOP_CMD':    's',
-        'BRAKE_CMD':   'v',
+                         'BRAKE_CMD':   'v',
         #Arm
         'BASE_CMD':    'x',
         'SHOULDER_CMD':'u',
@@ -31,6 +33,10 @@ _shoulder_deg = 100
 _elbow_deg = 100
 _gripper_deg = 100
 ser = None
+conn = False
+kill = False
+lock1 = threading.Lock()
+lock2 = threading.Lock()
 
 ### method ###
 def cmd_handler(arg1, arg2=None):
@@ -68,23 +74,69 @@ def get_serial_ports():
             pass
     return result
 
-def cleanup():
-    ser.close()
-    print("Cleanup!")
+def get_ports_routine():
+    while input("Scan ports?(y/n):") == 'y':
+        print("Available serial ports:{}".format(get_serial_ports()))
+
+def connect_routine():
+    global ser
+    
+    port = input("Port(tty***/COM***):")
+    baud = input("Baudrate:")
+
+    try:
+        ser = serial.Serial(port, baud, timeout=30)
+        
+    except ValueError:
+        if input("Baudrate should be an integer. Continue?(y/n):") != 'y':
+            access_kill(True)
+            
+    except serial.SerialException:
+        if input("Connect error. Continue?(y/n):") != 'y':
+            access_kill(True)
+
+	
+def check_bt():
+    typer = Controller()
+    
+    while not access_kill():
+        if access_conn():
+            typer.press(Key.esc)
+        time.sleep(1)
+
+def access_conn(write=None):
+    global conn
+    lock1.acquire()
+    if write != None:
+        conn = write
+    _return = conn
+    lock1.release()
+    return _return
+
+def access_kill(write=None):
+    global kill
+    lock2.acquire()
+    if write != None:
+        kill = write
+    _return = kill
+    lock2.release()
+    return _return
+
 
 def on_press(key):
     global _base_deg, _shoulder_deg, _elbow_deg
-    
-    if key == keyboard.Key.up:
+    if not ser or not ser.is_open:
+        return False
+    if key == Key.up:
         cmd_handler('FORWARD_CMD')
         print('Forward')
-    elif key == keyboard.Key.down:
+    elif key == Key.down:
         cmd_handler('BACK_CMD')
         print('Backward')
-    elif key == keyboard.Key.left:
+    elif key == Key.left:
         cmd_handler('LEFT_CMD')
         print('Turn left')
-    elif key == keyboard.Key.right:
+    elif key == Key.right:
         cmd_handler('RIGHT_CMD')
         print('Turn right')
     elif str(key)[1] == '.':
@@ -110,18 +162,31 @@ def on_press(key):
         cmd_handler('ELBOW_CMD', _elbow_deg)
     elif str(key)[1] == 'o':
         cmd_handler('GRIPPER_OC')
-
-def on_release(key):
-    if key == keyboard.Key.up:
-        cmd_handler('STOP_CMD')
-    elif key == keyboard.Key.down:
-        cmd_handler('STOP_CMD')
-    elif key == keyboard.Key.left:
-        cmd_handler('STOP_CMD')
-    elif key == keyboard.Key.right:
-        cmd_handler('STOP_CMD')
-    elif key == keyboard.Key.esc:
+    elif str(key)[1] == 'f':
+        access_conn(False)
+        _pwm_A = input("Motor A:")
+        access_conn(True)
+        cmd_handler('MOT_A_SPD', _pwm_A)
+    elif str(key)[1] == 'g':
+        access_conn(False)
+        _pwm_B = input("Motor B:")
+        access_conn(True)
+        cmd_handler('MOT_B_SPD', _pwm_B)
+    elif str(key)[1] == 'x':
+        access_kill(True)
         return False # Stop listener
+            
+def on_release(key):
+    if not ser or not ser.is_open:
+        return False
+    if key == Key.up:
+        cmd_handler('STOP_CMD')
+    elif key == Key.down:
+        cmd_handler('STOP_CMD')
+    elif key == Key.left:
+        cmd_handler('STOP_CMD')
+    elif key == Key.right:
+        cmd_handler('STOP_CMD')
 
 #atexit.register(cleanup)
 
@@ -129,20 +194,24 @@ def on_release(key):
 #Main program start here
 #
 def main():
-    global ser
-    print("Available serial ports:{}".format(get_serial_ports()))
+    checkthread = threading.Thread(target = check_bt)
+    checkthread.start()
 
-    port = input("Port(tty***/COM***):")
-    baud = input("Baudrate:")
+    while not access_kill():
+        get_ports_routine()
+        connect_routine()
+        
+        try:
+            with Listener(on_press = on_press, on_release = on_release) as listener:
+                access_conn(True)
+                listener.join()
+        except:
+            pass
+        access_conn(False)
 
-    try:
-        ser = serial.Serial(port, baud, timeout=3)
-    except serial.SerialException:
-        print("Connect error")
-        sys.exit(0)
-
-    with keyboard.Listener(on_press = on_press, on_release = on_release) as listener:
-        listener.join()
+    checkthread.join()
+    if ser:
+        ser.close()
 
 if __name__ == '__main__':
     main()
