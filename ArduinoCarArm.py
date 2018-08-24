@@ -208,9 +208,10 @@ def main():
                 listener.join()
         except:
             pass
-
+          
     if ser:
         ser.close()
 
 if __name__ == '__main__':
     main()
+
