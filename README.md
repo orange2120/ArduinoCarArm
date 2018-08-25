@@ -1,6 +1,6 @@
 # ArduinoCarArm
 
-![CarArm](https://github.com/orange2120/ArduinoCarArm/img/raw/master/DSC_1353.JPG)
+![CarArm](https://github.com/orange2120/ArduinoCarArm/raw/master/img/DSC_1353.JPG)
 
 Arduino bluetooh remote car combined with arm.
 
@@ -19,7 +19,7 @@ Arduino藍芽遙控車與arm的神奇組合
 
 The C# version controller program of CarArm
 
-![C# version controller program](https://github.com/orange2120/ArduinoCarArm/img/raw/master/CS_screenshot.png)
+![C# version controller program](https://github.com/orange2120/ArduinoCarArm/raw/master/img/CS_screenshot.png)
 
 * Connect:
 	* Display available Baudrate,COM port,
